@@ -27,3 +27,5 @@ html[lang=zh-CN] h1,html[lang=zh-CN] h2{font-family:"Songti SC","Noto Serif CJK 
 @media(max-width:1050px){.hero-stage{margin-top:65px}.hero-intro{font-size:14px;line-height:1.85}}
 @media(max-width:780px){.hero-stage{position:relative;top:auto;margin-top:0}.hero-intro{font-size:15px;line-height:1.85}.hero .eyebrow{font-size:10px;max-width:560px}}
 @media(max-width:520px){.hero-intro{font-size:14px;line-height:1.9}.hero-intro p+p{margin-top:16px}.hero-tags{gap:7px}.hero-tags span{font-size:10px;padding:5px 10px}.hero .eyebrow{font-size:9px;line-height:1.8;letter-spacing:.025em}.hero-contact{gap:8px;margin-top:18px}.contact-chip{font-size:11px;padding:9px 11px}.hero-contact .contact-chip{min-height:38px}.identity-line{line-height:1.8}.email-line>a{font-size:16px}.site-footer>div:first-child{max-width:100%}}
+
+.hero-intro a,.identity-line a{border-bottom:1px solid #8f77627a;transition:color .18s,border-color .18s}.hero-intro a:hover,.identity-line a:hover{color:var(--ink);border-color:var(--ink-soft)}

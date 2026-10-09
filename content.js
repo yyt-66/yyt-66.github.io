@@ -3,15 +3,16 @@ window.PROFILE = {
   name: { en: 'Yangtian Ye', zh: '叶阳天' },
   role: { en: 'Second-year M.S. student', zh: '硕士研究生（二年级）' },
   affiliation: { en: 'FSII, Zhejiang University', zh: '浙江大学 FSII' },
+  affiliationUrl: 'http://www.fsie-zju.com/',
   bio: {
-    en: `Hi! I'm **Yangtian Ye (叶阳天)**, a second-year M.S. student at the **FSII, Zhejiang University**, advised by **Prof. Geng Yang** and working with the research team led by **Academician Huayong Yang**.
+    en: `Hi! I'm **Yangtian Ye (叶阳天)**, a second-year M.S. student at the [**FSII, Zhejiang University**](http://www.fsie-zju.com/), advised by [**Prof. Geng Yang**](https://person.zju.edu.cn/gengy) and working with the research team led by [**Academician Huayong Yang**](https://person.zju.edu.cn/0089022).
 
 My research focuses on **Embodied AI**, particularly **whole-body tactile perception, physical interaction understanding, and human-robot interaction planning**. My long-term vision is to **bridge the last centimeter between humans and robots**, enabling robots to perceive, understand, and interact with the physical world in a more natural, intelligent, and human-centered way.
 
 Beyond academia, I am also building an **early-stage startup in Embodied AI**, focusing on **multimodal robotic foundation models and next-generation human-robot interaction design**. I am passionate about translating cutting-edge research into real-world robotic intelligence.
 
 I'm always excited to connect with researchers, entrepreneurs, and anyone passionate about the future of robotics. Feel free to reach out for **research collaborations, entrepreneurial opportunities, or simply an inspiring conversation**!`,
-    zh: `你好！我是**叶阳天（Yangtian Ye）**，目前是**浙江大学 FSII**的硕士研究生（二年级），师从**杨赓教授**，并在**杨华勇院士**带领的研究团队中开展研究。
+    zh: `你好！我是**叶阳天（Yangtian Ye）**，目前是[**浙江大学 FSII**](http://www.fsie-zju.com/)的硕士研究生（二年级），师从[**杨赓教授**](https://person.zju.edu.cn/gengy)，并在[**杨华勇院士**](https://person.zju.edu.cn/0089022)带领的研究团队中开展研究。
 
 我的研究聚焦**具身智能**，尤其关注**全身触觉感知、物理交互理解与人机交互规划**。我的长期愿景是**跨越人与机器人之间的最后一厘米**，让机器人以更自然、更智能、更以人为中心的方式感知、理解物理世界，并与之交互。
 

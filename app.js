@@ -33,7 +33,19 @@
   const email = typeof p.email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(p.email) ? p.email : '';
   const wechat = typeof p.wechat === 'string' ? p.wechat.trim() : '';
   const contactIcon = kind => `<img class="contact-icon" src="${root}assets/icon-${kind}.svg" width="18" height="18" alt="" aria-hidden="true">`;
-  const inline = value => esc(value).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  const bold = value => esc(value).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  function inline(value) {
+    const text = String(value ?? '');
+    const pattern = /\[([^\]\n]+)\]\((https?:\/\/[^\s()]+)\)/g;
+    let html = '', cursor = 0;
+    for (const match of text.matchAll(pattern)) {
+      html += bold(text.slice(cursor, match.index));
+      const href = url(match[2]);
+      html += href ? `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${bold(match[1])}</a>` : bold(match[0]);
+      cursor = match.index + match[0].length;
+    }
+    return html + bold(text.slice(cursor));
+  }
   const biography = () => local(p.bio).trim().split(/\n\s*\n/).filter(Boolean).map(paragraph => `<p>${inline(paragraph)}</p>`).join('');
   function contactChips() {
     return (email ? `<a class="contact-chip" href="mailto:${esc(email)}">${contactIcon('email')}<span><span class="contact-label">${esc(t('emailLabel'))}:</span> ${esc(email)}</span></a>` : '') +
@@ -48,7 +60,7 @@
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
     document.title = `${isNotes ? local({en:'Notes',zh:'研究笔记'}) : local({en:'Research Profile',zh:'个人学术主页'})} · ${local(p.name)}`;
     document.querySelectorAll('[data-i18n]').forEach(el => { const key = el.dataset.i18n; if (key === 'portraitTitle') el.innerHTML = t(key); else el.textContent = t(key); });
-    document.querySelectorAll('[data-profile]').forEach(el => { if (el.dataset.profile === 'bio') el.innerHTML = biography(); else el.textContent = local(p[el.dataset.profile]); });
+    document.querySelectorAll('[data-profile]').forEach(el => { if (el.dataset.profile === 'bio') el.innerHTML = biography(); else if (el.dataset.profile === 'affiliation' && url(p.affiliationUrl)) el.innerHTML = link(url(p.affiliationUrl),local(p.affiliation)); else el.textContent = local(p[el.dataset.profile]); });
     document.querySelectorAll('[data-interests]').forEach(el => { el.innerHTML = (p.interests || []).map(interest => `<span>${esc(local(interest))}</span>`).join(''); });
     const heroContact = document.querySelector('#hero-contact');
     if (heroContact) heroContact.innerHTML = contactChips();
