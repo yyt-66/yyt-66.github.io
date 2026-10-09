@@ -15,3 +15,8 @@ html[lang=zh-CN] h1,html[lang=zh-CN] h2{font-family:"Songti SC","Noto Serif CJK 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 
 [hidden]{display:none!important}.portrait-caption{text-align:right}
+
+.portrait-panel.has-portrait img{opacity:1;object-position:50% 0%}
+
+@media(min-width:781px) and (max-width:1050px){.portrait-panel.has-portrait .portrait-caption>span{font-size:7px;letter-spacing:.1em}.portrait-panel.has-portrait~.floating-card{width:145px;padding:14px}.portrait-panel.has-portrait~.floating-card .float-bottom strong{font-size:16px}.portrait-panel.has-portrait~.floating-card .float-detail{font-size:9px}}
+@media(max-width:520px){.portrait-panel.has-portrait~.floating-card{width:148px;padding:14px}.portrait-panel.has-portrait~.floating-card .float-bottom strong{font-size:16px}.portrait-panel.has-portrait~.floating-card .float-detail{font-size:8px}}

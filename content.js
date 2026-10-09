@@ -8,7 +8,7 @@ window.PROFILE = {
     zh: '我的研究兴趣涵盖机器人、大模型与传感器，关注智能系统如何感知环境、理解信息，并与物理世界交互。'
   },
   email: '',
-  portrait: '',
+  portrait: 'assets/portrait.jpeg',
   cv: '',
   links: { scholar: '', github: '', linkedin: '' },
   news: [],
