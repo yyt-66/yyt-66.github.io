@@ -6,9 +6,13 @@ Live site: https://yyt-66.github.io/
 
 ## Edit content
 
-Edit `content.js` to update names, affiliation, biography, portrait, email, CV, social profiles, news, affiliations, research entries, and notes. Text objects use `en` and `zh` keys. Use paths relative to this repository root for local files, such as `assets/portrait.jpg` or `assets/cv.pdf`.
+Edit `content.js` to update names, affiliation, biography, portrait, research interests, email, WeChat, CV, social profiles, news, affiliations, research entries, and notes. Text objects use `en` and `zh` keys. Use paths relative to this repository root for local files, such as `assets/portrait.jpg` or `assets/cv.pdf`.
 
-First-screen directions: `Humanoid`, `Perception`, `Understanding`, `Planning`.
+In `bio.en` and `bio.zh`, separate paragraphs with blank lines (`\n\n` in ordinary quoted JavaScript strings), and wrap bold text in `**double asterisks**`. Only bold formatting is supported; arbitrary HTML and other Markdown formatting are not supported.
+
+The `interests` array controls the four first-screen research labels: `Embodied AI`, `Multimodal Perception`, `Robot Reasoning & Planning`, and `Robot Foundation Models`. These display labels are separate from the research filter tags below.
+
+Set `email` to the public email address and `wechat` to the WeChat ID. The Email entry opens a mail link; clicking the WeChat entry copies the ID.
 
 Research groups: `representative`, `projects`, `others`. Research tags: `perception`, `understanding`, `planning`, `models`. Replace sample outlines with verified work and set `placeholder: false`. Missing information is intentionally marked as pending.
 
