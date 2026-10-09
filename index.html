@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A personal academic profile exploring robotics, large models, and intelligent sensing.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#d8c4ad">
+  <title>Research Profile · Robotics, Models & Sensing</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="content.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <div class="atmosphere" aria-hidden="true"><div class="dune dune-one"></div><div class="dune dune-two"></div></div>
+  <header class="site-header">
+    <a class="brand" href="#about" aria-label="Home"><span class="brand-mark" aria-hidden="true">r.</span><span class="brand-text"><strong data-profile="name">Your Name</strong><small data-i18n="brandSub">RESEARCH PROFILE</small></span></a>
+    <nav class="primary-nav" aria-label="Main navigation"><a href="#about" data-i18n="navAbout">About</a><a href="#news" data-i18n="navNews">News</a><a href="#research" data-i18n="navResearch">Research</a><a href="notes/" data-i18n="navNotes">Notes</a></nav>
+    <div class="header-actions"><a class="nav-cv" href="#contact" data-cv data-i18n="cvPending">CV · soon</a><div class="language-switch" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="zh" aria-pressed="false">中</button></div></div>
+  </header>
+
+  <main id="main" class="container">
+    <section id="about" class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="tiny-orbit" aria-hidden="true"></span><span data-i18n="heroEyebrow">ROBOTICS · MODELS · SENSING</span></div>
+        <h1 id="hero-title" data-profile="name">Your Name</h1>
+        <div class="identity-line"><span data-profile="role">Researcher</span><span class="dot">/</span><span data-profile="affiliation">Affiliation to be added</span></div>
+        <p class="hero-intro" data-profile="bio">My research interests span robotics, large models, and sensors — exploring how intelligent systems perceive, reason, and interact with the physical world.</p>
+        <div class="hero-tags"><span data-i18n="tagRobotics">Robotics</span><span data-i18n="tagModels">Large models</span><span data-i18n="tagSensing">Sensors</span></div>
+        <div class="hero-actions"><a class="button button-dark" href="#research"><span data-i18n="explore">Explore research</span><span aria-hidden="true">↗</span></a><a class="button button-glass" href="#contact"><span data-i18n="contactMe">Get in touch</span><span aria-hidden="true">↗</span></a></div>
+        <div class="social-links" data-social></div>
+        <p class="profile-note"><span class="status-dot" aria-hidden="true"></span><span data-i18n="profileNote">Profile preview · personal details to be added</span></p>
+      </div>
+      <div class="hero-stage" aria-label="Research interests">
+        <div class="portrait-panel glass-panel"><img id="portrait" src="assets/portrait-placeholder.svg" width="440" height="580" alt="Portrait placeholder"><span class="photo-label" data-i18n="photoPending">PORTRAIT TO BE ADDED</span><div class="portrait-caption"><span data-i18n="portraitEyebrow">A PERSONAL RESEARCH SPACE</span><strong data-i18n="portraitTitle">Perceive.<br>Reason. Interact.</strong></div></div>
+        <a class="floating-card float-robotics glass-panel" href="#research" data-topic="robotics"><span class="float-kicker">01 / <span data-i18n="field">RESEARCH FIELD</span></span><div class="float-bottom"><strong data-i18n="tagRobotics">Robotics</strong><span class="mini-icon" aria-hidden="true">↗</span></div><span class="float-detail" data-i18n="roboticsSub">Intelligence in motion.</span></a>
+        <a class="floating-card float-models" href="#research" data-topic="models"><span class="float-kicker">02 / <span data-i18n="field">RESEARCH FIELD</span></span><div class="float-bottom"><strong data-i18n="tagModels">Large models</strong><span class="mini-icon" aria-hidden="true">↗</span></div><span class="float-detail" data-i18n="modelsSub">Learning across modalities.</span></a>
+        <a class="floating-card float-sensing glass-panel" href="#research" data-topic="sensing"><span class="float-kicker">03 / <span data-i18n="field">RESEARCH FIELD</span></span><div class="float-bottom"><strong data-i18n="tagSensing">Sensors</strong><span class="mini-icon" aria-hidden="true">↗</span></div><span class="float-detail" data-i18n="sensingSub">A connection to the physical.</span></a>
+      </div>
+      <a class="scroll-cue" href="#news"><span aria-hidden="true">↓</span><span data-i18n="scroll">SCROLL TO DISCOVER</span></a>
+    </section>
+
+    <section id="news" class="section news-section" aria-labelledby="news-title">
+      <div class="section-heading"><div class="section-kicker"><span>01</span><span data-i18n="sectionNews">LATEST UPDATES</span></div><h2 id="news-title" data-i18n="newsTitle">News & moments.</h2></div>
+      <div id="news-list" class="news-list glass-panel"></div>
+    </section>
+
+    <section id="affiliations" class="section" aria-labelledby="affiliations-title">
+      <div class="section-heading"><div class="section-kicker"><span>02</span><span data-i18n="sectionAffiliations">THE JOURNEY</span></div><h2 id="affiliations-title" data-i18n="affiliationsTitle">Affiliations.</h2><p data-i18n="affiliationsIntro">Places to learn, collaborate, and build.</p></div>
+      <div id="affiliations-list" class="affiliation-grid"></div>
+    </section>
+
+    <section id="research" class="section research-section" aria-labelledby="research-title">
+      <div class="section-heading research-heading"><div><div class="section-kicker"><span>03</span><span data-i18n="sectionResearch">SELECTED WORK & DIRECTIONS</span></div><h2 id="research-title" data-i18n="researchTitle">Research.</h2></div><p class="research-intro" data-i18n="researchIntro">From physical signals to intelligent action. Exploring the connections between robotics, models, and sensing.</p></div>
+      <div class="research-toolbar"><div class="filters" role="group" aria-label="Filter research"><button type="button" class="filter active" data-filter="all" aria-pressed="true" data-i18n="filterAll">All areas</button><button type="button" class="filter" data-filter="robotics" aria-pressed="false" data-i18n="tagRobotics">Robotics</button><button type="button" class="filter" data-filter="models" aria-pressed="false" data-i18n="tagModels">Large models</button><button type="button" class="filter" data-filter="sensing" aria-pressed="false" data-i18n="tagSensing">Sensors</button></div><span id="filter-status" class="filter-status" role="status" aria-live="polite"></span></div>
+      <p class="research-draft-note" data-i18n="researchDraft">The cards below are research outlines. Publications and project details are yet to be added.</p>
+      <div id="research-groups"></div>
+    </section>
+
+    <section id="contact" class="section contact-section glass-panel" aria-labelledby="contact-title">
+      <div><div class="section-kicker"><span>04</span><span data-i18n="sectionContact">CONTACT</span></div><h2 id="contact-title" data-i18n="contactTitle">Let’s connect.</h2><p data-i18n="contactIntro">For research conversations, ideas, and potential collaborations.</p></div>
+      <div class="contact-details"><span class="small-label" data-i18n="emailLabel">EMAIL</span><div id="email-contact"></div><div id="cv-contact"></div></div>
+    </section>
+  </main>
+  <footer class="site-footer container"><div><strong data-profile="name">Your Name</strong><span data-i18n="footerTagline">Robotics · Large models · Sensors</span></div><div class="footer-right"><a href="#about" data-i18n="backTop">Back to top ↑</a><small><span data-i18n="designCredit">Design references</span> <a href="https://github.com/yizhixuanzhu/homepage-template" target="_blank" rel="noopener noreferrer">homepage-template</a> · <a href="https://www.qingweiben.com/" target="_blank" rel="noopener noreferrer">Qingwei Ben</a></small></div></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

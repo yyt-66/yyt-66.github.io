@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Abstract illustration of articulated robotic motion">
+  <defs>
+    <pattern id="r-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".8" fill="#322c29" opacity=".12"/>
+    </pattern>
+    <linearGradient id="r-disc" x1="0" x2="1" y2="1">
+      <stop stop-color="#f0c7bf" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#9a7a68" stop-opacity=".08"/>
+    </linearGradient>
+  </defs>
+  <path fill="#efe6da" d="M0 0h800v480H0z"/>
+  <path fill="url(#r-grid)" d="M0 0h800v480H0z"/>
+  <circle cx="454" cy="231" r="171" fill="url(#r-disc)"/>
+  <g fill="none" stroke="#9a7a68" stroke-width="1">
+    <circle cx="454" cy="231" r="171" opacity=".2"/>
+    <path d="M92 383h616M160 418V87M160 383l346-201" opacity=".28"/>
+    <path d="M203 365a231 231 0 0 1 436-115" stroke-dasharray="3 8" opacity=".55"/>
+    <path d="M279 340a162 162 0 0 1 302-155" opacity=".2"/>
+    <path d="M615 231h32m-16-16v32M144 124h32m-16-16v32M438 60h32m-16-16v32" opacity=".5"/>
+  </g>
+  <g fill="none" stroke="#a8b1bd" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M254 360l-38-149 171-56 89 58" stroke-width="22" opacity=".16"/>
+    <path d="M254 360l-38-149 171-56 89 58" stroke-width="1.5" stroke-dasharray="4 7" opacity=".8"/>
+    <circle cx="216" cy="211" r="19" stroke-width="1" opacity=".65"/>
+    <circle cx="387" cy="155" r="15" stroke-width="1" opacity=".65"/>
+  </g>
+  <ellipse cx="267" cy="384" rx="91" ry="13" fill="#322c29" opacity=".07"/>
+  <g stroke="#322c29" stroke-linejoin="round">
+    <path d="M198 376l19-29h88l18 29v10H198z" fill="#a8b1bd" stroke-width="1.5"/>
+    <path d="M218 347h87M209 376h102M233 386h56" fill="none" stroke-width="1" opacity=".5"/>
+    <path d="M239 350l-4-123 32-7 9 130z" fill="#a8b1bd" stroke-width="2"/>
+    <path d="M249 330l-2-88" fill="none" stroke="#efe6da" stroke-width="3"/>
+    <path d="M253 208l156-78 14 25-154 82z" fill="#9a7a68" stroke-width="2"/>
+    <path d="M279 211l117-61" fill="none" stroke="#efe6da" stroke-width="3" opacity=".8"/>
+    <path d="M429 134l99 84-17 19-103-78z" fill="#a8b1bd" stroke-width="2"/>
+    <path d="M435 151l65 54" fill="none" stroke="#efe6da" stroke-width="3"/>
+    <circle cx="254" cy="224" r="28" fill="#efe6da" stroke-width="2"/>
+    <circle cx="254" cy="224" r="14" fill="#9a7a68" stroke-width="1.5"/>
+    <circle cx="254" cy="224" r="4" fill="#322c29" stroke="none"/>
+    <circle cx="417" cy="145" r="23" fill="#efe6da" stroke-width="2"/>
+    <circle cx="417" cy="145" r="11" fill="#9a7a68" stroke-width="1.5"/>
+    <circle cx="417" cy="145" r="3.5" fill="#322c29" stroke="none"/>
+    <circle cx="520" cy="225" r="17" fill="#efe6da" stroke-width="2"/>
+    <circle cx="520" cy="225" r="6" fill="#9a7a68" stroke-width="1.5"/>
+    <path d="M533 237l14 12m-8-20 22 17-3 23-13 3m-19-29 14 20-11 20-13-3" fill="none" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke="#9a7a68" stroke-width="1.2">
+    <path d="M543 289l22-9 15 23-21 10z" fill="#f0c7bf" fill-opacity=".7"/>
+    <path d="M543 289v23l16 22 21-10v-21m-21 10v21m-16-22 21-10" opacity=".6"/>
+    <path d="M575 276l21-23m-10 42 29-5m-57-21 1-29" stroke-dasharray="2 5" opacity=".6"/>
+  </g>
+  <g fill="#322c29" opacity=".4">
+    <circle cx="160" cy="383" r="3"/>
+    <circle cx="648" cy="383" r="2"/>
+    <circle cx="160" cy="87" r="2"/>
+  </g>
+</svg>
