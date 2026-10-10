@@ -70,6 +70,7 @@
     document.querySelector('.language-switch')?.setAttribute('aria-label',t('languageLabel'));
     document.querySelector('.filters')?.setAttribute('aria-label',t('filterLabel'));
     document.querySelector('.hero-stage')?.setAttribute('aria-label',t('fieldsLabel'));
+    document.querySelector('.hero-tags')?.setAttribute('aria-label',t('fieldsLabel'));
     const cv = url(p.cv);
     document.querySelectorAll('[data-cv]').forEach(el => { el.textContent = t(cv ? 'cvReady' : 'cvPending'); el.href = cv || root + '#contact'; if (cv) { el.target = '_blank'; el.rel = 'noopener noreferrer'; } else { el.removeAttribute('target'); el.removeAttribute('rel'); } });
     document.querySelectorAll('[data-social]').forEach(el => {
