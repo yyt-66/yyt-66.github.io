@@ -1,6 +1,6 @@
 # Official media logo sources
 
-Downloaded unchanged from the publishers’ own websites on 2026-10-10 for linked media badges. No logos were generated, redrawn, recolored, or cropped. Only the five brands confirmed by the website owner are included; Xinhua Finance also has an official light-background variant.
+Downloaded from the publishers’ own websites on 2026-10-10 for linked media badges. No logos were generated, redrawn, recolored, traced, or upscaled. Official originals are preserved; separately named derivatives only remove transparent padding or crop the SVG viewport around the original newspaper wordmark, as recorded below. Only the five brands confirmed by the website owner are included.
 
 | Local file | Official asset URL | Official reference | Format / dimensions | Display note |
 | --- | --- | --- | --- | --- |
@@ -10,5 +10,16 @@ Downloaded unchanged from the publishers’ own websites on 2026-10-10 for linke
 | people.png | http://www.people.com.cn/img/2020wbc/imgs/logo.png | http://cq.people.com.cn/n2/2026/0914/c367737-41695583.html (`img[alt="人民网"]`) | PNG, 210 × 80, 22,571 bytes | Current red/gold People’s Daily Online (人民网) logo, transparent background; use a light badge. |
 | peoples-daily.png | https://cdnpeoplefront.aikan.pdnews.cn/rmrb/official-zh-website-node/0.0.86/_nuxt/logoPc.c71c3de2.png | https://www.peopleapp.com/ (`img.logo[alt="人民日报-有品质的新闻"]`) | PNG, 603 × 120, 30,765 bytes | Official red/gold “人民日报 | 客户端” masthead, transparent background; use a light badge. This is visually distinct from the People’s Daily Online / 人民网 logo. |
 | chinaventure-dark.png | https://m.chinaventure.com.cn/images/logo/logo_mob.png | https://m.chinaventure.com.cn/css/common.css (`.logo_mob`) | PNG, 219 × 60, 2,262 bytes | Dark blue mobile ChinaVenture wordmark, transparent background; use a light badge. |
+| cnfin-hd.jpg | https://search.cnfin.com/image/search-logo.jpg | https://search.cnfin.com/ (`img[src="/image/search-logo.jpg"]`) | JPEG, 746 × 120, 29,897 bytes | Official blue “新华财经 / XINHUA FINANCE ｜ 中国金融信息网” wordmark on white background; original file unchanged. Suitable for a light badge; the displayed width should follow its original aspect ratio. |
+| peoples-daily.svg | https://cdnpeoplefront.aikan.pdnews.cn/rmrb/official-zh-website-node/0.0.86/_nuxt/logoD.5e32fe5b.svg | https://www.peopleapp.com/ (official footer logo asset) | SVG, 147 × 62, 35,846 bytes | Original official vector asset: red newspaper calligraphy and gold “有品质的新闻” tagline. Genuine SVG paths; no embedded bitmap. |
+| peoples-daily-wordmark.svg | Same official SVG as peoples-daily.svg | Derived solely by changing the SVG width / height / viewBox; every original path, color, and definition is preserved | SVG, 107.675 × 42.133 | The viewport is cropped to the original red “人民日报” calligraphy, omitting the separate lower tagline and outer blank area. No paths have been redrawn, simplified, or recolored. Recommended compact newspaper badge. |
+| chinaventure-trimmed.png | Same official PNG as chinaventure-dark.png | Original PNG cropped losslessly to its nontransparent bounds `(0, 3, 219, 56)` | PNG, 219 × 53 | Removes only fully transparent top / bottom pixels. Original pixel colors and resolution are unchanged; recommended compact light badge. |
 
 The People’s Daily newspaper’s generic e-paper website header points to a People’s Daily Online (人民网) logo, so it was deliberately not used as the newspaper brand logo. The actual People’s Daily website masthead above was used instead.
+
+
+## Clarity and padding review
+
+The official Xinhua Net, Xinhua Finance, People’s Daily Online, and ChinaVenture page / stylesheet references checked on 2026-10-10 expose PNG / JPEG branding, not a suitable official SVG. Alternative white mobile mastheads were checked and rejected for the website’s light badges; no white logo was recolored. The People’s Daily official site does provide a real SVG and that file is included above.
+
+Original alpha bounds: `xinhua.png` fills 115 × 72; `people.png` fills 210 × 80; `cnfin-light.png` differs by only 1 pixel on the left and bottom; `peoples-daily.png` has only 1–3 transparent edge pixels. These originals do not have large empty borders. At a 22 CSS-pixel badge height, the retained PNG originals provide roughly 2.7–3.6 source pixels per CSS pixel. `chinaventure-trimmed.png` removes 7 empty top / bottom rows to use the visual wordmark height more effectively. The recommended `cnfin-hd.jpg` is the publisher’s original higher-resolution 746 × 120 image, not a local enlargement.

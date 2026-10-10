@@ -18,7 +18,7 @@ Research groups: `representative`, `projects`, `others`. Research tags: `percept
 
 News entries accept `date`, bilingual `text`, and an optional `url` for the whole news text. They can also include `image`, bilingual `imageAlt`, and `imageWidth` / `imageHeight` (the actual image dimensions). Images display at a larger size without cropping, with no link or view button. Omit `image` for a text-only update.
 
-Add new updates to the beginning of the `news` array, with the latest first. The compact News panel scrolls vertically when its contents exceed its maximum height. It supports mouse, touch, and keyboard scrolling. Keep publisher logos in the supplied 70 × 18 px display area; use an official dark/colored logo when displaying it on a light badge.
+Add new updates to the beginning of the `news` array, with the latest first. The compact News panel scrolls vertically when its contents exceed its maximum height. It supports mouse, touch, and keyboard scrolling. Publisher logos display at a consistent 22 px height with their original proportions, and each badge adapts to the logo width; use an official dark/colored logo when displaying it on a light badge.
 
 To add publisher badges below a news item, use `mediaLinks: [{ label: { en: 'Publisher', zh: '媒体名称' }, url: 'https://example.com/article', logo: 'assets/media/publisher.png' }]`. Omit `logo` to show a text badge, or add `theme: 'dark'` for white logos that need a dark background. Empty URLs are hidden. Both News and Research preserve their configured order and use plain text, not Markdown. Use the News `url` or `mediaLinks` and Research `links` fields for links. Official logo sources are recorded in `assets/media/SOURCES.md`.
 
