@@ -14,7 +14,7 @@ The `interests` array controls the four first-screen research labels: `Embodied 
 
 Set `email` to the public email address and `wechat` to the WeChat ID. The Email entry opens a mail link. In the hero, clicking the WeChat chip copies the ID; in the contact section, Email and WeChat share an icon, account, and separate Copy button layout.
 
-Research groups: `representative`, `projects`, `others`. Research tags: `perception`, `understanding`, `planning`, `models`. Replace sample outlines with verified work and set `placeholder: false`. Missing information is intentionally marked as pending.
+Research groups: `representative`, `projects`, `others`. Research tags: `perception`, `understanding`, `planning`, `models`, `sensors`, `teleoperation`, `imitation-learning`, `haptics`, `world-model`. The Research filters use these same IDs; categories without entries show an empty state. The hero Sensors card opens the `sensors` filter. Replace sample outlines with verified work and set `placeholder: false`. Missing information is intentionally marked as pending.
 
 News entries accept `date`, bilingual `text`, and an optional `url` for the whole news text. They can also include `image`, bilingual `imageAlt`, and `imageWidth` / `imageHeight` (the actual image dimensions). Images display at a larger size without cropping, with no link or view button. Omit `image` for a text-only update.
 

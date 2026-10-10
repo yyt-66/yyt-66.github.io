@@ -119,7 +119,7 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
       id: 'sensing-outline', group: 'projects', placeholder: true,
       title: { en: 'Sensor research', zh: '传感器研究' },
       summary: { en: 'A space for sensor systems, multimodal data, and experiments that connect hardware with intelligence.', zh: '用于展示传感系统、多模态数据及连接硬件与智能的实验项目。' },
-      tags: ['perception'], image: 'assets/sensing.svg', authors: '', venue: '', year: '', links: {}
+      tags: ['perception', 'sensors'], image: 'assets/sensing.svg', authors: '', venue: '', year: '', links: {}
     }
   ],
   notes: []
