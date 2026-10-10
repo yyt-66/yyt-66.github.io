@@ -123,7 +123,13 @@
   }
   function renderAffiliations() {
     const items = p.affiliations?.length ? p.affiliations : ['current','education','experience'].map(type => ({type,placeholder:true}));
-    document.querySelector('#affiliations-list').innerHTML = items.map((a, i) => `<article class="affiliation-card"><div class="affiliation-top"><span class="affiliation-icon" aria-hidden="true">${['⌘','◇','◎'][i % 3]}</span><span class="affiliation-period">${esc(a.placeholder ? t('datesPending') : local(a.period))}</span></div><h3>${esc(a.placeholder ? t(a.type) : local(a.role))}</h3><p>${a.url && url(a.url) ? link(url(a.url),local(a.organization)) : esc(a.placeholder ? t('institutionPending') : local(a.organization))}</p><span class="affiliation-detail">${esc(a.placeholder ? t('affiliationPending') : local(a.detail))}</span></article>`).join('');
+    document.querySelector('#affiliations-list').innerHTML = items.map((a, i) => {
+      const organization = a.placeholder ? t('institutionPending') : local(a.organization);
+      const logo = url(a.logo);
+      const detail = a.placeholder ? t('affiliationPending') : local(a.detail);
+      const units = [a.department, a.programme].map(local).filter(Boolean);
+      return `<article class="affiliation-card"><div class="affiliation-top">${logo ? `<img class="affiliation-logo${a.logoTheme === 'dark' ? ' affiliation-logo--reversed' : ''}" src="${esc(logo)}" width="140" height="56" loading="lazy" alt="${esc(organization)}">` : `<span class="affiliation-icon" aria-hidden="true">${['⌘','◇','◎'][i % 3]}</span>`}<span class="affiliation-period">${esc(a.placeholder ? t('datesPending') : local(a.period))}</span></div><div class="affiliation-body"><h3>${esc(a.placeholder ? t(a.type) : local(a.role))}</h3><p class="affiliation-organization">${a.url && url(a.url) ? link(url(a.url),organization) : esc(organization)}</p>${units.map(unit => `<p class="affiliation-unit">${esc(unit)}</p>`).join('')}${detail ? `<p class="affiliation-detail">${inline(detail)}</p>` : ''}</div></article>`;
+    }).join('');
   }
   function workCard(work) {
     const title = local(work.title);

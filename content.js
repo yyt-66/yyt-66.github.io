@@ -52,7 +52,56 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
       ]
     }
   ],
-  affiliations: [],
+  affiliations: [
+    {
+      type: 'education',
+      period: { en: '2025.09–Present', zh: '2025.09–至今' },
+      role: { en: 'M.S. Student', zh: '硕士研究生' },
+      organization: { en: 'Zhejiang University', zh: '浙江大学' },
+      department: { en: 'School of Mechanical Engineering', zh: '机械工程学院' },
+      programme: { en: 'Institute of Intelligent Equipment and Robotics', zh: '智能装备与机器人研究所' },
+      detail: {
+        en: 'Supervised by [Prof. Geng Yang](https://person.zju.edu.cn/gengy), with the team led by [Academician Huayong Yang](https://person.zju.edu.cn/0089022)',
+        zh: '师从[杨赓教授](https://person.zju.edu.cn/gengy)，在[杨华勇院士](https://person.zju.edu.cn/0089022)团队开展研究'
+      },
+      logo: 'assets/affiliations/zju.svg', logoTheme: 'dark', url: 'https://www.zju.edu.cn/'
+    },
+    {
+      type: 'experience',
+      period: { en: '2024.10–2025.06', zh: '2024.10–2025.06' },
+      role: { en: 'Humanoid Robotics Research Intern', zh: '人形机器人研发实习生' },
+      organization: { en: 'Fourier', zh: '上海傅利叶智能科技股份有限公司' },
+      detail: { en: 'Wearable robotic exoskeletons and teleoperation systems', zh: '机器人穿戴式外骨骼及遥操作系统' },
+      logo: 'assets/affiliations/fourier.svg', url: 'https://www.fftai.com/'
+    },
+    {
+      type: 'education',
+      period: { en: '2024.02', zh: '2024.02' },
+      role: { en: 'Visiting Student', zh: '访问学生' },
+      organization: { en: 'National University of Singapore', zh: '新加坡国立大学（NUS）' },
+      programme: { en: 'AI and LLMs Programme', zh: 'AI and LLMs Programme' },
+      logo: 'assets/affiliations/nus.svg', url: 'https://www.nus.edu.sg/'
+    },
+    {
+      type: 'education',
+      period: { en: '2022.07', zh: '2022.07' },
+      role: { en: 'Summer School Participant', zh: '暑校学员' },
+      organization: { en: 'Zhejiang University', zh: '浙江大学' },
+      department: { en: 'School of Aeronautics and Astronautics', zh: '航空航天学院' },
+      programme: { en: 'MOE “Top-notch Plan 2.0” Mechanics Summer School', zh: '教育部“拔尖计划2.0”力学暑校' },
+      detail: { en: 'Bipedal wheeled robot development', zh: '双足轮式机器人研发' },
+      logo: 'assets/affiliations/zju.svg', logoTheme: 'dark', url: 'https://www.zju.edu.cn/'
+    },
+    {
+      type: 'education',
+      period: { en: '2021.09–2025.06', zh: '2021.09–2025.06' },
+      role: { en: 'B.Eng.', zh: '工学学士' },
+      organization: { en: 'Zhejiang University of Technology', zh: '浙江工业大学' },
+      department: { en: 'College of Mechanical Engineering', zh: '机械工程学院' },
+      programme: { en: 'Robotics Engineering', zh: '机器人工程专业' },
+      logo: 'assets/affiliations/zjut.png', logoTheme: 'dark', url: 'https://www.zjut.edu.cn/'
+    }
+  ],
   research: [
     {
       id: 'robotics-outline', group: 'representative', placeholder: true,

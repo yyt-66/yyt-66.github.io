@@ -22,6 +22,8 @@ Add new updates to the beginning of the `news` array, with the latest first. The
 
 To add publisher badges below a news item, use `mediaLinks: [{ label: { en: 'Publisher', zh: '媒体名称' }, url: 'https://example.com/article', logo: 'assets/media/publisher.png' }]`. Omit `logo` to show a text badge, or add `theme: 'dark'` for white logos that need a dark background. Empty URLs are hidden. Both News and Research preserve their configured order and use plain text, not Markdown. Use the News `url` or `mediaLinks` and Research `links` fields for links. Official logo sources are recorded in `assets/media/SOURCES.md`.
 
+Affiliations are listed in their configured order, with the latest start date first. Each entry accepts bilingual `period`, `role`, `organization`, optional `department` and `programme`, and a short `detail`; use `logo` for a local institution logo and `url` for its official website. `detail` supports the same safe bold/link formatting as the biography. Official logo sources are recorded in `assets/affiliations/SOURCES.md`.
+
 The `notes/` directory contains the bilingual notes index. An article URL must point to an existing external article or a local HTML file; article bodies are not generated automatically.
 
 Small interface text uses the shared `--font-min: 12px` token in `styles.css` across desktop and mobile layouts. Chinese and English section headings omit trailing full stops. Design references are recorded in `ATTRIBUTION.md`.
