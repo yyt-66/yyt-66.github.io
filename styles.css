@@ -47,3 +47,43 @@ html[lang=zh-CN] h1,html[lang=zh-CN] h2{font-family:"Songti SC","Noto Serif CJK 
 
 .site-footer .footer-copyright{font-size:var(--font-min);color:#7b6b5d;line-height:1.6}
 @media(prefers-reduced-motion:reduce){.affiliation-grid{scroll-behavior:auto}}
+
+/* Research: a swipeable topic strip and a readable single-column mobile feed. */
+.research-filter-footer{display:flex;justify-content:flex-end;align-items:center;gap:12px;min-width:0}
+.research-filter-hint{display:none}
+@media(max-width:780px){
+  .research-heading{display:block;margin-bottom:24px}
+  .research-heading .section-kicker{margin-bottom:16px}
+  .research-heading h2{margin-bottom:16px}
+  .research-intro{max-width:100%;font-size:14px;line-height:1.75;padding:0}
+  .research-toolbar{gap:10px;margin:24px 0 18px;min-width:0}
+  .research-toolbar .filters{display:flex;flex-wrap:nowrap;gap:8px;width:100%;min-width:0;max-width:100%;padding:2px 0 10px;border:0;border-radius:0;background:none;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#9a7a6866 transparent;scroll-padding-inline:2px}
+  .research-toolbar .filter{flex:0 0 auto;min-height:44px;padding:10px 16px;font-size:13px;line-height:1.4;border:1px solid #9a7a6855;background:#ffffff38}
+  .research-toolbar .filter.active{border-color:var(--ink-soft);background:var(--ink-soft)}
+  .research-filter-footer{justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 12px}
+  .research-filter-hint{display:block;font-size:var(--font-min);color:var(--muted);line-height:1.6}
+  .research-toolbar .filter-status{padding:0;margin-left:auto;line-height:1.6}
+  .research-draft-note{margin:0 0 26px;line-height:1.75}
+  .research-group{margin-top:28px}
+  .research-grid{grid-template-columns:minmax(0,1fr);gap:20px}
+  .research-card.project-card{display:block}
+  .research-card .research-image{aspect-ratio:2/1;height:auto;min-height:0;border-right:0;border-bottom:1px solid #ffffff50}
+  .research-card .research-card-body{padding:22px}
+  .research-card .work-meta{gap:12px;letter-spacing:.04em;line-height:1.5;margin-bottom:10px}
+  .research-card h4,.research-card.project-card h4{font-size:22px;line-height:1.35;letter-spacing:-.02em;overflow-wrap:anywhere}
+  .research-card .work-summary{font-size:14px;line-height:1.75}
+  .work-authors{font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+  .research-card .work-bottom{align-items:flex-start;flex-direction:column;gap:12px;margin-top:18px;padding-top:16px}
+  .work-links{flex-wrap:wrap;gap:10px 16px}
+  .work-links a{min-height:32px;display:inline-flex;align-items:center}
+  .work-pending{line-height:1.6}
+  .no-results{padding:28px 22px;line-height:1.75;text-align:center}
+}
+@media(max-width:520px){
+  .research-card .research-image{aspect-ratio:16/9}
+  .research-group .group-heading{align-items:flex-start;flex-direction:column;gap:5px;padding-bottom:12px;margin-bottom:16px}
+  .research-group .group-heading h3{font-size:19px;line-height:1.4}
+  .research-group .group-heading>span{line-height:1.5}
+  .research-card .research-card-body{padding:20px}
+  .research-card .image-corner{right:12px;top:12px;padding:4px 8px;letter-spacing:0}
+}
