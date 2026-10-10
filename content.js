@@ -30,7 +30,7 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
   ],
   portrait: 'assets/portrait.jpeg',
   cv: '',
-  links: { scholar: '', github: '', linkedin: '' },
+  links: { scholar: '', github: 'https://github.com/yyt-66', linkedin: 'https://www.linkedin.com/in/yangtian-ye-7930b63b2/' },
   news: [
     {
       date: '2026.9',
