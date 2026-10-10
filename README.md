@@ -16,6 +16,10 @@ Set `email` to the public email address and `wechat` to the WeChat ID. The Email
 
 Research groups: `representative`, `projects`, `others`. Research tags: `perception`, `understanding`, `planning`, `models`. Replace sample outlines with verified work and set `placeholder: false`. Missing information is intentionally marked as pending.
 
+News entries accept `date`, bilingual `text`, and an optional `url` for the whole news text. They can also include `image`, bilingual `imageAlt` / `imageLabel`, and `imageWidth` / `imageHeight` (the actual image dimensions). Images display without cropping and open their full-size original when clicked. Omit `image` for a text-only update.
+
+To add publisher badges below a news item, use `mediaLinks: [{ label: { en: 'Publisher', zh: '媒体名称' }, url: 'https://example.com/article', logo: 'assets/media/publisher.png' }]`. Omit `logo` to show a text badge, or add `theme: 'dark'` for white logos that need a dark background. Empty URLs are hidden. Both News and Research preserve their configured order and use plain text, not Markdown. Use the News `url` or `mediaLinks` and Research `links` fields for links. Official logo sources are recorded in `assets/media/SOURCES.md`.
+
 The `notes/` directory contains the bilingual notes index. An article URL must point to an existing external article or a local HTML file; article bodies are not generated automatically.
 
 ## Preview locally
