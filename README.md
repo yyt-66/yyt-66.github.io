@@ -16,7 +16,7 @@ Set `email` to the public email address and `wechat` to the WeChat ID. The Email
 
 Research groups: `representative`, `projects`, `others`. Research tags: `perception`, `understanding`, `planning`, `models`. Replace sample outlines with verified work and set `placeholder: false`. Missing information is intentionally marked as pending.
 
-News entries accept `date`, bilingual `text`, and an optional `url` for the whole news text. They can also include `image`, bilingual `imageAlt` / `imageLabel`, and `imageWidth` / `imageHeight` (the actual image dimensions). Images display without cropping and open their full-size original when clicked. Omit `image` for a text-only update.
+News entries accept `date`, bilingual `text`, and an optional `url` for the whole news text. They can also include `image`, bilingual `imageAlt`, and `imageWidth` / `imageHeight` (the actual image dimensions). Images display at a larger size without cropping, with no link or view button. Omit `image` for a text-only update.
 
 Add new updates to the beginning of the `news` array, with the latest first. The compact News panel scrolls vertically when its contents exceed its maximum height. It supports mouse, touch, and keyboard scrolling. Keep publisher logos in the supplied 70 × 18 px display area; use an official dark/colored logo when displaying it on a light badge.
 

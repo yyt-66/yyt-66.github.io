@@ -94,11 +94,10 @@
   function renderNews() {
     const items = Array.isArray(p.news) ? p.news : [];
     const coverageLabel = local({en:'Event coverage',zh:'赛事报道'});
-    const defaultImageLabel = local({en:'View image',zh:'查看图片'});
+    const defaultImageAlt = local({en:'News image',zh:'动态配图'});
     const list = document.querySelector('#news-list');
     list.innerHTML = items.length ? items.map(n => {
       const image = url(n.image);
-      const imageLabel = local(n.imageLabel) || defaultImageLabel;
       const width = Number(n.imageWidth), height = Number(n.imageHeight);
       const dimensions = Number.isInteger(width) && width > 0 && Number.isInteger(height) && height > 0 ? ` width="${width}" height="${height}"` : '';
       const media = (Array.isArray(n.mediaLinks) ? n.mediaLinks : []).filter(m => url(m.url));
@@ -107,7 +106,7 @@
         const label = local(m.label);
         return `<a class="news-media-link${m.theme === 'dark' ? ' news-media-link--dark' : ''}" href="${esc(url(m.url))}" target="_blank" rel="noopener noreferrer" aria-label="${esc(label)}" title="${esc(label)}">${logo ? `<img src="${esc(logo)}" alt="${esc(label)}" loading="lazy">` : `<span>${esc(label)}</span>`}<span aria-hidden="true">↗</span></a>`;
       }).join('');
-      return `<article class="news-item${image ? ' news-item--illustrated' : ''}"><time>${esc(n.date)}</time><div class="news-body"><p>${url(n.url) ? link(url(n.url),local(n.text)) : esc(local(n.text))}</p>${badges ? `<div class="news-coverage"><span class="news-coverage-label">${esc(coverageLabel)}</span><div class="news-media-links" role="group" aria-label="${esc(coverageLabel)}">${badges}</div></div>` : ''}</div>${image ? `<a class="news-image-link" href="${esc(image)}" target="_blank" rel="noopener noreferrer"><img src="${esc(image)}" alt="${esc(local(n.imageAlt) || imageLabel)}" loading="lazy"${dimensions}><span>${esc(imageLabel)} <span aria-hidden="true">↗</span></span></a>` : ''}</article>`;
+      return `<article class="news-item${image ? ' news-item--illustrated' : ''}"><time>${esc(n.date)}</time><div class="news-body"><p>${url(n.url) ? link(url(n.url),local(n.text)) : esc(local(n.text))}</p>${badges ? `<div class="news-coverage"><span class="news-coverage-label">${esc(coverageLabel)}</span><div class="news-media-links" role="group" aria-label="${esc(coverageLabel)}">${badges}</div></div>` : ''}</div>${image ? `<figure class="news-image"><img src="${esc(image)}" alt="${esc(local(n.imageAlt) || defaultImageAlt)}" loading="lazy"${dimensions}></figure>` : ''}</article>`;
     }).join('') : `<div class="empty-row"><span class="empty-symbol" aria-hidden="true">↗</span><div><strong>${esc(t('newsEmptyTitle'))}</strong><p>${esc(t('newsEmptyText'))}</p></div></div>`;
     document.querySelector('#news-scroll-hint').textContent = local({en:'Scroll within the list for more updates ↓',zh:'在列表内上下滚动，查看更多动态 ↓'});
     list.querySelectorAll('img').forEach(img => img.addEventListener('load',syncNewsOverflow,{once:true}));

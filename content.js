@@ -39,7 +39,6 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
         zh: '带领团队斩获第十一届“创客中国”智能仿生机器人中小企业创新创业大赛决赛创业组二等奖。'
       },
       image: 'assets/证书.jpg', imageWidth: 1703, imageHeight: 2390,
-      imageLabel: {en:'View certificate',zh:'查看获奖证书'},
       imageAlt: {
         en: 'Second Prize certificate for the project “Zhirou Interaction — Rapid Integration Platform for Large-Area Electronic Skin”, Zhejiang University.',
         zh: '浙江大学“智柔交互—大面积电子皮肤快速集成平台”项目创业组二等奖获奖证书'
