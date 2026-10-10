@@ -24,7 +24,7 @@ To add publisher badges below a news item, use `mediaLinks: [{ label: { en: 'Pub
 
 The `notes/` directory contains the bilingual notes index. An article URL must point to an existing external article or a local HTML file; article bodies are not generated automatically.
 
-Small interface text uses the shared `--font-min: 12px` token in `styles.css` across desktop and mobile layouts. Chinese section headings omit trailing full stops. Design references are recorded in `ATTRIBUTION.md`.
+Small interface text uses the shared `--font-min: 12px` token in `styles.css` across desktop and mobile layouts. Chinese and English section headings omit trailing full stops. Design references are recorded in `ATTRIBUTION.md`.
 
 ## Preview locally
 
