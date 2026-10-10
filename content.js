@@ -64,7 +64,7 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
         en: 'Supervised by [Prof. Geng Yang](https://person.zju.edu.cn/gengy), with the team led by [Academician Huayong Yang](https://person.zju.edu.cn/0089022)',
         zh: '师从[杨赓教授](https://person.zju.edu.cn/gengy)，在[杨华勇院士](https://person.zju.edu.cn/0089022)团队开展研究'
       },
-      logo: 'assets/affiliations/zju.svg', logoTheme: 'dark', url: 'https://www.zju.edu.cn/'
+      logo: 'assets/affiliations/zju-blue.svg', url: 'https://www.zju.edu.cn/'
     },
     {
       type: 'experience',
@@ -90,7 +90,7 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
       department: { en: 'School of Aeronautics and Astronautics', zh: '航空航天学院' },
       programme: { en: 'MOE “Top-notch Plan 2.0” Mechanics Summer School', zh: '教育部“拔尖计划2.0”力学暑校' },
       detail: { en: 'Bipedal wheeled robot development', zh: '双足轮式机器人研发' },
-      logo: 'assets/affiliations/zju.svg', logoTheme: 'dark', url: 'https://www.zju.edu.cn/'
+      logo: 'assets/affiliations/zju-blue.svg', url: 'https://www.zju.edu.cn/'
     },
     {
       type: 'education',
@@ -99,7 +99,7 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
       organization: { en: 'Zhejiang University of Technology', zh: '浙江工业大学' },
       department: { en: 'College of Mechanical Engineering', zh: '机械工程学院' },
       programme: { en: 'Robotics Engineering', zh: '机器人工程专业' },
-      logo: 'assets/affiliations/zjut.png', logoTheme: 'dark', url: 'https://www.zjut.edu.cn/'
+      logo: 'assets/affiliations/zjut.png', logoTheme: 'monochrome', url: 'https://www.zjut.edu.cn/'
     }
   ],
   research: [

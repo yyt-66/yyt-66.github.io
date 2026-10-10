@@ -24,6 +24,8 @@ To add publisher badges below a news item, use `mediaLinks: [{ label: { en: 'Pub
 
 Affiliations are listed in their configured order, with the latest start date first. Each entry accepts bilingual `period`, `role`, `organization`, optional `department` and `programme`, and a short `detail`; use `logo` for a local institution logo and `url` for its official website. `detail` supports the same safe bold/link formatting as the biography. Official logo sources are recorded in `assets/affiliations/SOURCES.md`.
 
+The affiliations strip shows about 3.5 cards on desktop and scrolls horizontally by touch, trackpad, keyboard, scrollbar, or the arrow buttons. Dates appear first at the top left of each card. Institution logos have transparent backgrounds; set `logoTheme: 'monochrome'` to render an existing white transparent logo in black. The home and notes footers display the site's copyright under `yeyangtian`.
+
 The `notes/` directory contains the bilingual notes index. An article URL must point to an existing external article or a local HTML file; article bodies are not generated automatically.
 
 Small interface text uses the shared `--font-min: 12px` token in `styles.css` across desktop and mobile layouts. Chinese and English section headings omit trailing full stops. Design references are recorded in `ATTRIBUTION.md`.

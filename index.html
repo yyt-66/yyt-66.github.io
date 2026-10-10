@@ -8,9 +8,9 @@
   <meta name="theme-color" content="#d8c4ad">
   <title>Research Profile · Yangtian Ye</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20261009-logo-y">
-  <link rel="stylesheet" href="styles.css?v=20261010-affiliations">
-  <script defer src="content.js?v=20261010-affiliations"></script>
-  <script defer src="app.js?v=20261010-affiliations"></script>
+  <link rel="stylesheet" href="styles.css?v=20261010-affiliations-scroll">
+  <script defer src="content.js?v=20261010-affiliations-scroll"></script>
+  <script defer src="app.js?v=20261010-affiliations-scroll"></script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -50,7 +50,8 @@
 
     <section id="affiliations" class="section" aria-labelledby="affiliations-title">
       <div class="section-heading"><div class="section-kicker"><span>02</span><span data-i18n="sectionAffiliations">THE JOURNEY</span></div><h2 id="affiliations-title" data-i18n="affiliationsTitle">Affiliations</h2><p data-i18n="affiliationsIntro">Places to learn, collaborate, and build.</p></div>
-      <div id="affiliations-list" class="affiliation-grid"></div>
+      <div class="affiliations-navigation"><span id="affiliations-scroll-hint" class="affiliations-scroll-hint" data-i18n="affiliationsScroll">Scroll horizontally to explore →</span><div class="affiliations-scroll-buttons"><button type="button" data-affiliations-scroll="-1" aria-label="Previous experience" disabled>←</button><button type="button" data-affiliations-scroll="1" aria-label="Next experience">→</button></div></div>
+      <div id="affiliations-list" class="affiliation-grid" role="region" aria-labelledby="affiliations-title" aria-describedby="affiliations-scroll-hint" tabindex="0"></div>
     </section>
 
     <section id="research" class="section research-section" aria-labelledby="research-title">
@@ -65,7 +66,7 @@
       <div class="contact-details"><span class="small-label" data-i18n="contactDetailsLabel">CONTACT DETAILS</span><div id="email-contact"></div><div id="wechat-contact"></div><div id="cv-contact"></div></div>
     </section>
   </main>
-  <footer class="site-footer container"><div><strong data-profile="name">Yangtian Ye</strong><span data-i18n="footerTagline">Embodied AI · Multimodal Perception · Robot Reasoning &amp; Planning · Robot Foundation Models</span></div><div class="footer-right"><a href="#about" data-i18n="backTop">Back to top ↑</a></div></footer>
+  <footer class="site-footer container"><div><strong data-profile="name">Yangtian Ye</strong><span data-i18n="footerTagline">Embodied AI · Multimodal Perception · Robot Reasoning &amp; Planning · Robot Foundation Models</span></div><div class="footer-right"><a href="#about" data-i18n="backTop">Back to top ↑</a><small class="footer-copyright" data-i18n="copyright">© 2026 yeyangtian. All rights reserved.</small></div></footer>
   <div id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
