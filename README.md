@@ -12,7 +12,7 @@ In `bio.en` and `bio.zh`, separate paragraphs with blank lines (`\n\n` in ordina
 
 The `interests` array controls the four first-screen research labels: `Embodied AI`, `Multimodal Perception`, `Robot Reasoning & Planning`, and `Robot Foundation Models`. These display labels are separate from the research filter tags below.
 
-Set `email` to the public email address and `wechat` to the WeChat ID. The Email entry opens a mail link; clicking the WeChat entry copies the ID.
+Set `email` to the public email address and `wechat` to the WeChat ID. The Email entry opens a mail link. In the hero, clicking the WeChat chip copies the ID; in the contact section, Email and WeChat share an icon, account, and separate Copy button layout.
 
 Research groups: `representative`, `projects`, `others`. Research tags: `perception`, `understanding`, `planning`, `models`. Replace sample outlines with verified work and set `placeholder: false`. Missing information is intentionally marked as pending.
 
@@ -23,6 +23,8 @@ Add new updates to the beginning of the `news` array, with the latest first. The
 To add publisher badges below a news item, use `mediaLinks: [{ label: { en: 'Publisher', zh: '媒体名称' }, url: 'https://example.com/article', logo: 'assets/media/publisher.png' }]`. Omit `logo` to show a text badge, or add `theme: 'dark'` for white logos that need a dark background. Empty URLs are hidden. Both News and Research preserve their configured order and use plain text, not Markdown. Use the News `url` or `mediaLinks` and Research `links` fields for links. Official logo sources are recorded in `assets/media/SOURCES.md`.
 
 The `notes/` directory contains the bilingual notes index. An article URL must point to an existing external article or a local HTML file; article bodies are not generated automatically.
+
+Small interface text uses the shared `--font-min: 12px` token in `styles.css` across desktop and mobile layouts. Chinese section headings omit trailing full stops. Design references are recorded in `ATTRIBUTION.md`.
 
 ## Preview locally
 
