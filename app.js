@@ -148,7 +148,10 @@
     const resources = Object.entries(work.links || {}).filter(([,v]) => url(v));
     const imageUrl = url(work.image);
     const image = imageUrl ? `<div class="research-image"><img loading="lazy" src="${esc(imageUrl)}" width="800" height="480" alt="${esc(work.placeholder ? t('illustrationAlt') + title : title)}">${work.placeholder ? `<span class="image-corner">${esc(t('concept'))}</span>` : ''}</div>` : '';
-    return `<article class="research-card ${work.group==='projects'?'project-card':''}">${image}<div class="research-card-body"><div class="work-meta"><span>${esc(work.placeholder ? t('outline') : local(work.venue))}</span><span>${esc(work.year)}</span></div><h4>${esc(title)}</h4>${work.authors ? `<p class="work-authors">${esc(local(work.authors))}</p>` : ''}<p class="work-summary">${esc(local(work.summary))}</p><div class="work-bottom">${tags(work.tags)}${resources.length ? `<div class="work-links">${resources.map(([key,v])=>link(url(v),key.toUpperCase()+' ↗')).join('')}</div>` : (work.placeholder ? `<span class="work-pending">${esc(t(work.group==='projects'?'projectPending':'paperPending'))}</span>` : '')}</div></div></article>`;
+    const venue = work.placeholder ? t('outline') : local(work.venue);
+    const summary = local(work.summary);
+    const meta = venue || work.year ? `<div class="work-meta"><span>${esc(venue)}</span><span>${esc(work.year)}</span></div>` : '';
+    return `<article class="research-card ${work.group==='projects'?'project-card':''} ${imageUrl?'':'research-card--text'}">${image}<div class="research-card-body">${meta}<h4>${esc(title)}</h4>${work.authors ? `<p class="work-authors">${esc(local(work.authors))}</p>` : ''}${summary ? `<p class="work-summary">${esc(summary)}</p>` : ''}<div class="work-bottom">${tags(work.tags)}${resources.length ? `<div class="work-links">${resources.map(([key,v])=>link(url(v),key.toUpperCase()+' ↗')).join('')}</div>` : (work.placeholder ? `<span class="work-pending">${esc(t(work.group==='projects'?'projectPending':'paperPending'))}</span>` : '')}</div></div></article>`;
   }
   function renderResearch() {
     const items = research.filter(w => selected === 'all' || w.tags?.includes(selected));

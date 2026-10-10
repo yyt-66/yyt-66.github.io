@@ -48,6 +48,9 @@ html[lang=zh-CN] h1,html[lang=zh-CN] h2{font-family:"Songti SC","Noto Serif CJK 
 .site-footer .footer-copyright{font-size:var(--font-min);color:#7b6b5d;line-height:1.6}
 @media(prefers-reduced-motion:reduce){.affiliation-grid{scroll-behavior:auto}}
 
+/* Text-only projects use the full card until a cover image is supplied. */
+.research-card--text.project-card{display:block}
+
 /* Research: a swipeable topic strip and a readable single-column mobile feed. */
 .research-filter-footer{display:flex;justify-content:flex-end;align-items:center;gap:12px;min-width:0}
 .research-filter-hint{display:none}

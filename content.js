@@ -104,22 +104,109 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
   ],
   research: [
     {
-      id: 'robotics-outline', group: 'representative', placeholder: true,
-      title: { en: 'Robotics research', zh: '机器人研究' },
-      summary: { en: 'A space for work on robotic perception, motion planning, and interaction with the physical world.', zh: '用于展示机器人感知、运动规划以及与物理世界交互的研究。' },
-      tags: ['perception', 'planning'], image: 'assets/robotics.svg', authors: '', venue: '', year: '', links: {}
+      "id": "fv-act",
+      "group": "representative",
+      "placeholder": false,
+      "title": {
+        "en": "FV-ACT: Force-Visual Action Chunking with Haptic Supervision for Robotic Tele-Auscultation",
+        "zh": "FV-ACT: Force-Visual Action Chunking with Haptic Supervision for Robotic Tele-Auscultation"
+      },
+      "summary": {
+        "en": "",
+        "zh": ""
+      },
+      "tags": [
+        "teleoperation",
+        "imitation-learning",
+        "haptics"
+      ],
+      "image": "",
+      "authors": "",
+      "venue": {
+        "en": "In submitting",
+        "zh": "投稿中"
+      },
+      "year": "",
+      "links": {}
     },
     {
-      id: 'models-outline', group: 'representative', placeholder: true,
-      title: { en: 'Large-model research', zh: '大模型研究' },
-      summary: { en: 'A space for work connecting language, visual understanding, and intelligent decision-making.', zh: '用于展示语言、视觉理解与智能决策相关的研究。' },
-      tags: ['understanding', 'planning', 'models'], image: 'assets/models.svg', authors: '', venue: '', year: '', links: {}
+      "id": "awakening-personality",
+      "group": "representative",
+      "placeholder": false,
+      "title": {
+        "en": "Awakening Personality in Robotics: An Embodied Large-Area-Tactile Paradigm for Personalized Human-Robot Interaction",
+        "zh": "Awakening Personality in Robotics: An Embodied Large-Area-Tactile Paradigm for Personalized Human-Robot Interaction"
+      },
+      "summary": {
+        "en": "",
+        "zh": ""
+      },
+      "tags": [
+        "perception",
+        "sensors",
+        "haptics"
+      ],
+      "image": "",
+      "authors": "",
+      "venue": {
+        "en": "In submitting",
+        "zh": "投稿中"
+      },
+      "year": "",
+      "links": {}
     },
     {
-      id: 'sensing-outline', group: 'projects', placeholder: true,
-      title: { en: 'Sensor research', zh: '传感器研究' },
-      summary: { en: 'A space for sensor systems, multimodal data, and experiments that connect hardware with intelligence.', zh: '用于展示传感系统、多模态数据及连接硬件与智能的实验项目。' },
-      tags: ['perception', 'sensors'], image: 'assets/sensing.svg', authors: '', venue: '', year: '', links: {}
+      "id": "virtual-proxy-teleoperation",
+      "group": "representative",
+      "placeholder": false,
+      "title": {
+        "en": "Toward Intimate Human-Robot Interaction Virtual Proxy-Based Teleoperation for Safe Robotic Embrace",
+        "zh": "Toward Intimate Human-Robot Interaction Virtual Proxy-Based Teleoperation for Safe Robotic Embrace"
+      },
+      "summary": {
+        "en": "",
+        "zh": ""
+      },
+      "tags": [
+        "perception",
+        "sensors",
+        "haptics",
+        "planning"
+      ],
+      "image": "",
+      "authors": "",
+      "venue": {
+        "en": "In submitting",
+        "zh": "投稿中"
+      },
+      "year": "",
+      "links": {}
+    },
+    {
+      "id": "spider-inspired-tactile-sensing",
+      "group": "projects",
+      "placeholder": false,
+      "title": {
+        "en": "Physics-prior fusion learning empowers super-resolution tactile sensing with a spider-inspired array-free architecture",
+        "zh": "Physics-prior fusion learning empowers super-resolution tactile sensing with a spider-inspired array-free architecture"
+      },
+      "summary": {
+        "en": "",
+        "zh": ""
+      },
+      "tags": [
+        "sensors",
+        "haptics",
+        "planning"
+      ],
+      "image": "",
+      "authors": "",
+      "venue": {
+        "en": "",
+        "zh": ""
+      },
+      "year": "",
+      "links": {}
     }
   ],
   notes: []
