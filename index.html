@@ -8,9 +8,9 @@
   <meta name="theme-color" content="#d8c4ad">
   <title>Research Profile · Yangtian Ye</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20261009-logo-y">
-  <link rel="stylesheet" href="styles.css?v=20261010-news-media">
-  <script defer src="content.js?v=20261010-news-selected"></script>
-  <script defer src="app.js?v=20261010-news-media"></script>
+  <link rel="stylesheet" href="styles.css?v=20261010-news-compact">
+  <script defer src="content.js?v=20261010-news-compact"></script>
+  <script defer src="app.js?v=20261010-news-compact"></script>
 </head>
 <body data-page="home">
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -45,7 +45,8 @@
 
     <section id="news" class="section news-section" aria-labelledby="news-title">
       <div class="section-heading"><div class="section-kicker"><span>01</span><span data-i18n="sectionNews">LATEST UPDATES</span></div><h2 id="news-title" data-i18n="newsTitle">News & moments.</h2></div>
-      <div id="news-list" class="news-list glass-panel"></div>
+      <div id="news-list" class="news-list glass-panel" role="region" aria-labelledby="news-title" tabindex="-1"></div>
+      <p id="news-scroll-hint" class="news-scroll-hint" hidden></p>
     </section>
 
     <section id="affiliations" class="section" aria-labelledby="affiliations-title">

@@ -46,7 +46,7 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
       },
       mediaLinks: [
         {label: {en:'Xinhuanet',zh:'新华网'},logo:'assets/media/xinhua.png',url:'https://cq.news.cn/20260911/a132d50b3d3b4fe190793371ac27dae9/c.html'},
-        {label: {en:'Xinhua Finance',zh:'新华财经 · 中国金融信息网'},logo:'assets/media/cnfin.png',theme:'dark',url:'https://www.cnfin.com/cmjj-lb/detail/20260911/4468962_1.html'},
+        {label: {en:'Xinhua Finance',zh:'新华财经 · 中国金融信息网'},logo:'assets/media/cnfin-light.png',url:'https://www.cnfin.com/cmjj-lb/detail/20260911/4468962_1.html'},
         {label: {en:'People’s Daily Online',zh:'人民网'},logo:'assets/media/people.png',url:'https://cq.people.com.cn/n2/2026/0914/c367737-41695583.html'},
         {label: {en:'People’s Daily',zh:'人民日报'},logo:'assets/media/peoples-daily.png',url:'https://kpzg.people.com.cn/n1/2026/0910/c404214-40795912.html'},
         {label: {en:'ChinaVenture',zh:'投中网'},logo:'assets/media/chinaventure-dark.png',url:'https://www.chinaventure.com.cn/news/64-20260909-393183.html'}
