@@ -147,7 +147,7 @@
     const title = local(work.title);
     const resources = Object.entries(work.links || {}).filter(([,v]) => url(v));
     const imageUrl = url(work.image);
-    const image = imageUrl ? `<div class="research-image"><img loading="lazy" src="${esc(imageUrl)}" width="800" height="480" alt="${esc(work.placeholder ? t('illustrationAlt') + title : title)}">${work.placeholder ? `<span class="image-corner">${esc(t('concept'))}</span>` : ''}</div>` : '';
+    const image = imageUrl ? `<div class="research-image${work.imageFit==='contain'?' research-image--contain':''}"><img loading="lazy" src="${esc(imageUrl)}" width="${Number(work.imageWidth)||800}" height="${Number(work.imageHeight)||480}" alt="${esc(work.placeholder ? t('illustrationAlt') + title : title)}">${work.placeholder ? `<span class="image-corner">${esc(t('concept'))}</span>` : ''}</div>` : '';
     const venue = work.placeholder ? t('outline') : local(work.venue);
     const summary = local(work.summary);
     const meta = venue || work.year ? `<div class="work-meta"><span>${esc(venue)}</span><span>${esc(work.year)}</span></div>` : '';

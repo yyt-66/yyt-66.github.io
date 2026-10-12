@@ -90,3 +90,8 @@ html[lang=zh-CN] h1,html[lang=zh-CN] h2{font-family:"Songti SC","Noto Serif CJK 
   .research-card .research-card-body{padding:20px}
   .research-card .image-corner{right:12px;top:12px;padding:4px 8px;letter-spacing:0}
 }
+
+/* Scientific diagrams keep every label visible within the cover. */
+.research-image--contain{background:#fff}
+.research-image--contain img{object-fit:contain}
+.research-card:hover .research-image--contain img{transform:none}

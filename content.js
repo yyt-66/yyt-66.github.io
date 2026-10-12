@@ -120,7 +120,10 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
         "imitation-learning",
         "haptics"
       ],
-      "image": "",
+      "image": "assets/CoverFigforFVACT.png",
+      "imageFit": "contain",
+      "imageWidth": 2000,
+      "imageHeight": 1125,
       "authors": "",
       "venue": {
         "en": "In submitting",
