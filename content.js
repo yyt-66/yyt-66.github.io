@@ -69,9 +69,9 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
     {
       type: 'experience',
       period: { en: '2024.10–2025.06', zh: '2024.10–2025.06' },
-      role: { en: 'Humanoid Robotics Research Intern', zh: '人形机器人研发实习生' },
+      role: { en: 'Research Intern', zh: '研发实习生' },
       organization: { en: 'Fourier', zh: '上海傅利叶智能科技股份有限公司' },
-      detail: { en: 'Wearable robotic exoskeletons and teleoperation systems', zh: '机器人穿戴式外骨骼及遥操作系统' },
+      detail: { en: 'Wearable robotic exoskeletons, teleoperation systems, and humanoid locomotion', zh: '机器人穿戴式外骨骼、遥操作系统及人形机器人运动控制' },
       logo: 'assets/affiliations/fourier-full.svg', url: 'https://www.fftai.com/'
     },
     {
