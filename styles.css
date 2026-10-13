@@ -92,6 +92,7 @@ html[lang=zh-CN] h1,html[lang=zh-CN] h2{font-family:"Songti SC","Noto Serif CJK 
 }
 
 /* Scientific diagrams keep every label visible within the cover. */
-.research-image--contain{background:#fff}
+.research-image--contain{margin:20px 20px 0;border:1px solid #9a7a6833;border-radius:18px;background:#fff}
 .research-image--contain img{object-fit:contain}
 .research-card:hover .research-image--contain img{transform:none}
+@media(max-width:520px){.research-image--contain{margin:16px 16px 0;border-radius:14px}}
