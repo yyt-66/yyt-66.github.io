@@ -72,7 +72,7 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
       role: { en: 'Humanoid Robotics Research Intern', zh: '人形机器人研发实习生' },
       organization: { en: 'Fourier', zh: '上海傅利叶智能科技股份有限公司' },
       detail: { en: 'Wearable robotic exoskeletons and teleoperation systems', zh: '机器人穿戴式外骨骼及遥操作系统' },
-      logo: 'assets/affiliations/fourier.svg', url: 'https://www.fftai.com/'
+      logo: 'assets/affiliations/fourier-full.svg', url: 'https://www.fftai.com/'
     },
     {
       type: 'education',
