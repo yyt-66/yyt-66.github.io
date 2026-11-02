@@ -137,8 +137,8 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
       "group": "representative",
       "placeholder": false,
       "title": {
-        "en": "Awakening Personality in Robotics: An Embodied Large-Area-Tactile Paradigm for Personalized Human-Robot Interaction",
-        "zh": "Awakening Personality in Robotics: An Embodied Large-Area-Tactile Paradigm for Personalized Human-Robot Interaction"
+        "en": "Large-Area Tactile Sensing for Fine-Grained Emotion Estimation and Personalized Human-Robot Interaction",
+        "zh": "Large-Area Tactile Sensing for Fine-Grained Emotion Estimation and Personalized Human-Robot Interaction"
       },
       "summary": {
         "en": "",
@@ -149,7 +149,10 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
         "sensors",
         "haptics"
       ],
-      "image": "",
+      "image": "assets/large-area-introduction.png",
+      "imageFit": "contain",
+      "imageWidth": 2041,
+      "imageHeight": 1134,
       "authors": "",
       "venue": {
         "en": "In submitting",

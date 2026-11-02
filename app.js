@@ -6,15 +6,16 @@
   const root = isNotes ? '../' : '';
   const translations = {
     en: {
-      skip:'Skip to content',brandSub:'RESEARCH PROFILE',navAbout:'About',navNews:'News',navResearch:'Research',navNotes:'Notes',cvPending:'CV · soon',cvReady:'CV ↗',heroEyebrow:'From Perception to Understanding, From Intelligence to Interaction.',tagHumanoid:'Humanoid',tagPerception:'Perception',tagUnderstanding:'Understanding',tagPlanning:'Planning',tagModels:'Models',tagSensors:'Sensors',tagTeleoperation:'Teleoperation',tagImitationLearning:'Imitation Learning',tagHaptics:'Haptics',tagWorldModel:'World Model',fieldRobotics:'Robotics',fieldModels:'Models',fieldSensing:'Sensors',explore:'Explore research',contactMe:'Get in touch',profileNote:'Profile preview · personal details to be added',photoPending:'PORTRAIT TO BE ADDED',portraitEyebrow:'A PERSONAL RESEARCH SPACE',portraitTitle:'Perceive.<br>Reason.<br>Interact.',field:'RESEARCH FIELD',roboticsSub:'Intelligence in motion.',modelsSub:'Learning across modalities.',sensingSub:'A connection to the physical.',scroll:'SCROLL TO DISCOVER',sectionNews:'LATEST UPDATES',newsTitle:'News & moments',sectionAffiliations:'THE JOURNEY',affiliationsTitle:'Affiliations',affiliationsIntro:'Places to learn, collaborate, and build.',sectionResearch:'SELECTED WORK & DIRECTIONS',researchTitle:'Research',researchIntro:'Perception, understanding, planning, and models — exploring humanoid intelligence from physical signals to action.',filterAll:'All areas',filterHint:'Swipe to browse topics →',researchDraft:'Cards marked “Research outline” are placeholders; their publication or project details are yet to be added.',sectionContact:'CONTACT',contactTitle:'Let’s connect',contactIntro:'For research conversations, ideas, and potential collaborations.',emailLabel:'Email',wechatLabel:'WeChat',contactDetailsLabel:'CONTACT DETAILS',copyWechat:'Copy WeChat ID',wechatCopied:'WeChat ID copied',wechatCopyFailed:'Please select and copy the WeChat ID.',footerTagline:'Embodied AI · Multimodal Perception · Robot Reasoning & Planning · Robot Foundation Models',copyright:'© 2026 yeyangtian. All rights reserved.',affiliationsScroll:'Scroll horizontally to explore →',affiliationsPrevious:'Previous experience',affiliationsNext:'Next experience',backTop:'Back to top ↑',pending:'pending',newsEmptyTitle:'The next chapter starts here',newsEmptyText:'New papers, projects, and research milestones will appear here.',current:'Current position',education:'Education',experience:'Research experience',detailsPending:'Details to be added',institutionPending:'Institution / lab to be added',datesPending:'DATES TO BE ADDED',affiliationPending:'Academic information pending',representative:'Representative Research',projects:'Core Projects',others:'Other Publications',representativeLabel:'SELECTED RESEARCH',projectsLabel:'SYSTEMS & EXPERIMENTS',othersLabel:'MORE WORK',outline:'RESEARCH OUTLINE',concept:'CONCEPT ILLUSTRATION',projectPending:'Project details forthcoming',paperPending:'Publication details forthcoming',otherEmpty:'Additional publications will appear here.',noResults:'No work in this area yet.',emailPending:'Email to be added',cvTextPending:'Curriculum vitae · to be added',downloadCV:'View curriculum vitae ↗',copyEmail:'Copy',copied:'Email copied',copyFailed:'Please select and copy the email address.',notesEyebrow:'THE RESEARCH NOTEBOOK',notesTitle:'Notes & ideas',notesIntro:'A place for research reflections, experiments, and things learned along the way.',notesEmptyTitle:'A notebook, soon to be filled',notesEmptyText:'Research notes and technical writing will be published here. There are no posts yet.',backHome:'← Back to profile',returnResearch:'Explore research',notesFooter:'A small space for ideas in progress.',draftCardCount:n=>`${n} research outline${n===1?'':'s'}`,cardCount:n=>`${n} item${n===1?'':'s'}`,read:'Read note ↗',portraitGeneric:'Personal portrait',portraitAlt:'Portrait of ',placeholderAlt:'Illustrated portrait placeholder',illustrationAlt:'Concept illustration for ',homeLabel:'Home',navLabel:'Main navigation',filterLabel:'Filter research',fieldsLabel:'Research interests',languageLabel:'Language'
+      skip:'Skip to content',brandSub:'RESEARCH PROFILE',navAbout:'About',navNews:'News',navResearch:'Research',navNotes:'Notes',cvPending:'CV · soon',cvReady:'CV ↗',heroEyebrow:'From Perception to Understanding, From Intelligence to Interaction.',tagHumanoid:'Humanoid',tagPerception:'Perception',tagUnderstanding:'Understanding',tagPlanning:'Planning',tagModels:'Models',tagSensors:'Sensors',tagTeleoperation:'Teleoperation',tagImitationLearning:'Imitation Learning',tagHaptics:'Haptics',tagWorldModel:'World Model',fieldRobotics:'Robotics',fieldModels:'Models',fieldSensing:'Sensors',explore:'Explore research',contactMe:'Get in touch',profileNote:'Profile preview · personal details to be added',photoPending:'PORTRAIT TO BE ADDED',portraitEyebrow:'A PERSONAL RESEARCH SPACE',portraitTitle:'Perceive.<br>Reason.<br>Interact.',field:'RESEARCH FIELD',roboticsSub:'Intelligence in motion.',modelsSub:'Learning across modalities.',sensingSub:'A connection to the physical.',scroll:'SCROLL TO DISCOVER',sectionNews:'LATEST UPDATES',newsTitle:'News & moments',sectionAffiliations:'THE JOURNEY',affiliationsTitle:'Affiliations',affiliationsIntro:'Places to learn, collaborate, and build.',sectionResearch:'SELECTED WORK & DIRECTIONS',researchTitle:'Research',researchIntro:'Perception, understanding, planning, and models — exploring humanoid intelligence from physical signals to action.',filterAll:'All areas',filterHint:'Swipe to browse topics →',researchDraft:'Cards marked “Research outline” are placeholders; their publication or project details are yet to be added.',sectionContact:'CONTACT',contactTitle:'Let’s connect',contactIntro:'For research conversations, ideas, and potential collaborations.',emailLabel:'Email',wechatLabel:'WeChat',contactDetailsLabel:'CONTACT DETAILS',copyWechat:'Copy WeChat ID',wechatCopied:'WeChat ID copied',wechatCopyFailed:'Please select and copy the WeChat ID.',footerTagline:'Embodied AI · Multimodal Perception · Robot Reasoning & Planning · Robot Foundation Models',copyright:'© 2026 yeyangtian. All rights reserved.',affiliationsScroll:'Browse the journey →',affiliationsPrevious:'Previous experience',affiliationsNext:'Next experience',backTop:'Back to top ↑',pending:'pending',newsEmptyTitle:'The next chapter starts here',newsEmptyText:'New papers, projects, and research milestones will appear here.',current:'Current position',education:'Education',experience:'Research experience',detailsPending:'Details to be added',institutionPending:'Institution / lab to be added',datesPending:'DATES TO BE ADDED',affiliationPending:'Academic information pending',representative:'Representative Research',projects:'Core Projects',others:'Other Publications',representativeLabel:'SELECTED RESEARCH',projectsLabel:'SYSTEMS & EXPERIMENTS',othersLabel:'MORE WORK',outline:'RESEARCH OUTLINE',concept:'CONCEPT ILLUSTRATION',projectPending:'Project details forthcoming',paperPending:'Publication details forthcoming',otherEmpty:'Additional publications will appear here.',noResults:'No work in this area yet.',emailPending:'Email to be added',cvTextPending:'Curriculum vitae · to be added',downloadCV:'View curriculum vitae ↗',copyEmail:'Copy',copied:'Email copied',copyFailed:'Please select and copy the email address.',notesEyebrow:'THE RESEARCH NOTEBOOK',notesTitle:'Notes & ideas',notesIntro:'A place for research reflections, experiments, and things learned along the way.',notesEmptyTitle:'A notebook, soon to be filled',notesEmptyText:'Research notes and technical writing will be published here. There are no posts yet.',backHome:'← Back to profile',returnResearch:'Explore research',notesFooter:'A small space for ideas in progress.',draftCardCount:n=>`${n} research outline${n===1?'':'s'}`,cardCount:n=>`${n} item${n===1?'':'s'}`,read:'Read note ↗',portraitGeneric:'Personal portrait',portraitAlt:'Portrait of ',placeholderAlt:'Illustrated portrait placeholder',illustrationAlt:'Concept illustration for ',homeLabel:'Home',navLabel:'Main navigation',filterLabel:'Filter research',fieldsLabel:'Research interests',languageLabel:'Language'
     },
     zh: {
-      skip:'跳至主要内容',brandSub:'个人学术主页',navAbout:'简介',navNews:'动态',navResearch:'研究',navNotes:'笔记',cvPending:'简历 · 待补充',cvReady:'简历 ↗',heroEyebrow:'从感知到理解，从智能到交互。',tagHumanoid:'人形机器人',tagPerception:'感知',tagUnderstanding:'理解',tagPlanning:'规划',tagModels:'模型',tagSensors:'传感器',tagTeleoperation:'遥操作',tagImitationLearning:'模仿学习',tagHaptics:'触觉',tagWorldModel:'世界模型',fieldRobotics:'机器人',fieldModels:'模型',fieldSensing:'传感器',explore:'了解我的研究',contactMe:'联系交流',profileNote:'主页预览 · 个人资料待补充',photoPending:'个人照片待补充',portraitEyebrow:'我的学术空间',portraitTitle:'感知。<br>理解。<br>交互。',field:'研究方向',roboticsSub:'让智能走向物理世界。',modelsSub:'跨越模态的理解与学习。',sensingSub:'连接真实世界的信息。',scroll:'向下探索',sectionNews:'近期动态',newsTitle:'动态与进展',sectionAffiliations:'学术之路',affiliationsTitle:'教育与经历',affiliationsIntro:'学习、协作与探索发生的地方。',sectionResearch:'代表研究与探索方向',researchTitle:'研究',researchIntro:'围绕感知、理解、规划与模型，探索人形机器人从物理信号到智能行动的过程。',filterAll:'全部方向',filterHint:'左右滑动，浏览研究方向 →',researchDraft:'标有“研究方向示意”的卡片为占位，论文或项目详情待补充。',sectionContact:'联系交流',contactTitle:'从交流开始',contactIntro:'欢迎就研究问题、想法与合作机会展开交流。',emailLabel:'邮箱',wechatLabel:'微信',contactDetailsLabel:'联系方式',copyWechat:'复制微信号',wechatCopied:'微信号已复制',wechatCopyFailed:'请选中微信号并复制。',footerTagline:'具身智能 · 多模态感知 · 机器人推理与规划 · 机器人基础模型',copyright:'© 2026 yeyangtian · 版权所有',affiliationsScroll:'左右滑动，浏览更多经历 →',affiliationsPrevious:'上一段经历',affiliationsNext:'下一段经历',backTop:'回到顶部 ↑',pending:'待补充',newsEmptyTitle:'下一段探索，从这里开始',newsEmptyText:'新论文、项目进展与学术动态将在这里更新。',current:'当前任职',education:'教育背景',experience:'研究经历',detailsPending:'信息待补充',institutionPending:'机构 / 实验室待补充',datesPending:'起止时间待补充',affiliationPending:'学术履历待完善',representative:'代表研究',projects:'核心项目',others:'其他论文',representativeLabel:'精选研究成果',projectsLabel:'系统与实验',othersLabel:'更多成果',outline:'研究方向示意',concept:'概念示意图',projectPending:'项目详情待补充',paperPending:'论文信息待补充',otherEmpty:'其他论文与成果将在这里展示。',noResults:'这一方向暂无研究条目。',emailPending:'公开邮箱待补充',cvTextPending:'个人简历 · 待补充',downloadCV:'查看个人简历 ↗',copyEmail:'复制',copied:'邮箱已复制',copyFailed:'请选中邮箱地址并复制。',notesEyebrow:'研究笔记',notesTitle:'笔记与想法',notesIntro:'记录研究思考、实验探索，以及沿途学到的东西。',notesEmptyTitle:'留白，等待新的思考',notesEmptyText:'这里将陆续发布研究笔记与技术文章，目前暂无文章。',backHome:'← 返回个人主页',returnResearch:'浏览研究方向',notesFooter:'为进行中的思考，留一个位置。',draftCardCount:n=>`${n} 个方向示意`,cardCount:n=>`${n} 个条目`,read:'阅读笔记 ↗',portraitGeneric:'个人形象照',portraitAlt:'个人照片：',placeholderAlt:'个人照片占位示意',illustrationAlt:'研究方向概念示意：',homeLabel:'个人主页',navLabel:'主要导航',filterLabel:'筛选研究方向',fieldsLabel:'研究方向',languageLabel:'语言'
+      skip:'跳至主要内容',brandSub:'个人学术主页',navAbout:'简介',navNews:'动态',navResearch:'研究',navNotes:'笔记',cvPending:'简历 · 待补充',cvReady:'简历 ↗',heroEyebrow:'从感知到理解，从智能到交互。',tagHumanoid:'人形机器人',tagPerception:'感知',tagUnderstanding:'理解',tagPlanning:'规划',tagModels:'模型',tagSensors:'传感器',tagTeleoperation:'遥操作',tagImitationLearning:'模仿学习',tagHaptics:'触觉',tagWorldModel:'世界模型',fieldRobotics:'机器人',fieldModels:'模型',fieldSensing:'传感器',explore:'了解我的研究',contactMe:'联系交流',profileNote:'主页预览 · 个人资料待补充',photoPending:'个人照片待补充',portraitEyebrow:'我的学术空间',portraitTitle:'感知。<br>理解。<br>交互。',field:'研究方向',roboticsSub:'让智能走向物理世界。',modelsSub:'跨越模态的理解与学习。',sensingSub:'连接真实世界的信息。',scroll:'向下探索',sectionNews:'近期动态',newsTitle:'动态与进展',sectionAffiliations:'学术之路',affiliationsTitle:'教育与经历',affiliationsIntro:'学习、协作与探索发生的地方。',sectionResearch:'代表研究与探索方向',researchTitle:'研究',researchIntro:'围绕感知、理解、规划与模型，探索人形机器人从物理信号到智能行动的过程。',filterAll:'全部方向',filterHint:'左右滑动，浏览研究方向 →',researchDraft:'标有“研究方向示意”的卡片为占位，论文或项目详情待补充。',sectionContact:'联系交流',contactTitle:'从交流开始',contactIntro:'欢迎就研究问题、想法与合作机会展开交流。',emailLabel:'邮箱',wechatLabel:'微信',contactDetailsLabel:'联系方式',copyWechat:'复制微信号',wechatCopied:'微信号已复制',wechatCopyFailed:'请选中微信号并复制。',footerTagline:'具身智能 · 多模态感知 · 机器人推理与规划 · 机器人基础模型',copyright:'© 2026 yeyangtian · 版权所有',affiliationsScroll:'切换查看更多经历 →',affiliationsPrevious:'上一段经历',affiliationsNext:'下一段经历',backTop:'回到顶部 ↑',pending:'待补充',newsEmptyTitle:'下一段探索，从这里开始',newsEmptyText:'新论文、项目进展与学术动态将在这里更新。',current:'当前任职',education:'教育背景',experience:'研究经历',detailsPending:'信息待补充',institutionPending:'机构 / 实验室待补充',datesPending:'起止时间待补充',affiliationPending:'学术履历待完善',representative:'代表研究',projects:'核心项目',others:'其他论文',representativeLabel:'精选研究成果',projectsLabel:'系统与实验',othersLabel:'更多成果',outline:'研究方向示意',concept:'概念示意图',projectPending:'项目详情待补充',paperPending:'论文信息待补充',otherEmpty:'其他论文与成果将在这里展示。',noResults:'这一方向暂无研究条目。',emailPending:'公开邮箱待补充',cvTextPending:'个人简历 · 待补充',downloadCV:'查看个人简历 ↗',copyEmail:'复制',copied:'邮箱已复制',copyFailed:'请选中邮箱地址并复制。',notesEyebrow:'研究笔记',notesTitle:'笔记与想法',notesIntro:'记录研究思考、实验探索，以及沿途学到的东西。',notesEmptyTitle:'留白，等待新的思考',notesEmptyText:'这里将陆续发布研究笔记与技术文章，目前暂无文章。',backHome:'← 返回个人主页',returnResearch:'浏览研究方向',notesFooter:'为进行中的思考，留一个位置。',draftCardCount:n=>`${n} 个方向示意`,cardCount:n=>`${n} 个条目`,read:'阅读笔记 ↗',portraitGeneric:'个人形象照',portraitAlt:'个人照片：',placeholderAlt:'个人照片占位示意',illustrationAlt:'研究方向概念示意：',homeLabel:'个人主页',navLabel:'主要导航',filterLabel:'筛选研究方向',fieldsLabel:'研究方向',languageLabel:'语言'
     }
   };
   let lang = 'en';
   try { const saved = localStorage.getItem('research-profile-language'); if (saved === 'zh' || saved === 'en') lang = saved; } catch (_) {}
   let selected = 'all';
+  let affiliationIndex = 0;
   const t = key => translations[lang][key] || key;
   const local = value => typeof value === 'string' ? value : value?.[lang] || value?.en || value?.zh || '';
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -123,25 +124,53 @@
   }
   function renderAffiliations() {
     const items = p.affiliations?.length ? p.affiliations : ['current','education','experience'].map(type => ({type,placeholder:true}));
+    affiliationIndex = Math.min(affiliationIndex, Math.max(0, items.length - 1));
     document.querySelector('#affiliations-list').innerHTML = items.map((a, i) => {
       const organization = a.placeholder ? t('institutionPending') : local(a.organization);
       const logo = url(a.logo);
       const detail = a.placeholder ? t('affiliationPending') : local(a.detail);
       const units = [a.department, a.programme].map(local).filter(Boolean);
-      return `<article class="affiliation-card"><div class="affiliation-top"><span class="affiliation-period">${esc(a.placeholder ? t('datesPending') : local(a.period))}</span><div class="affiliation-logo-slot">${logo ? `<img class="affiliation-logo${a.logoTheme === 'monochrome' ? ' affiliation-logo--monochrome' : ''}" src="${esc(logo)}" width="180" height="54" loading="lazy" alt="${esc(organization)}">` : `<span class="affiliation-icon" aria-hidden="true">${['⌘','◇','◎'][i % 3]}</span>`}</div></div><div class="affiliation-body"><h3>${esc(a.placeholder ? t(a.type) : local(a.role))}</h3><p class="affiliation-organization">${a.url && url(a.url) ? link(url(a.url),organization) : esc(organization)}</p>${units.map(unit => `<p class="affiliation-unit">${esc(unit)}</p>`).join('')}${detail ? `<p class="affiliation-detail">${inline(detail)}</p>` : ''}</div></article>`;
+      return `<article class="affiliation-card" data-affiliation-index="${i}" tabindex="0" aria-label="${esc(a.placeholder ? t(a.type) : local(a.role))}"><div class="affiliation-top"><span class="affiliation-period">${esc(a.placeholder ? t('datesPending') : local(a.period))}</span><div class="affiliation-logo-slot">${logo ? `<img class="affiliation-logo${a.logoTheme === 'monochrome' ? ' affiliation-logo--monochrome' : ''}" src="${esc(logo)}" width="180" height="54" loading="lazy" alt="${esc(organization)}">` : `<span class="affiliation-icon" aria-hidden="true">${['⌘','◇','◎'][i % 3]}</span>`}</div></div><div class="affiliation-body"><h3>${esc(a.placeholder ? t(a.type) : local(a.role))}</h3><p class="affiliation-organization">${a.url && url(a.url) ? link(url(a.url),organization) : esc(organization)}</p>${units.map(unit => `<p class="affiliation-unit">${esc(unit)}</p>`).join('')}${detail ? `<p class="affiliation-detail">${inline(detail)}</p>` : ''}</div></article>`;
     }).join('');
     document.querySelector('[data-affiliations-scroll="-1"]').setAttribute('aria-label',t('affiliationsPrevious'));
     document.querySelector('[data-affiliations-scroll="1"]').setAttribute('aria-label',t('affiliationsNext'));
     requestAnimationFrame(syncAffiliationsScroll);
   }
+  function positionAffiliations() {
+    const list = document.querySelector('#affiliations-list');
+    if (!list) return;
+    const cards = [...list.querySelectorAll('.affiliation-card')];
+    if (!cards.length) return;
+    const cardWidth = Math.min(430, Math.max(250, list.clientWidth * (list.clientWidth < 560 ? .78 : .42)));
+    const step = Math.min(cardWidth * .58, Math.max(112, list.clientWidth * .22));
+    const centerOffset = Math.max(0, (list.clientWidth - cardWidth) / 2);
+    list.style.setProperty('--affiliation-card-width', `${cardWidth}px`);
+    list.style.setProperty('--affiliation-step', `${step}px`);
+    cards.forEach((card, index) => {
+      const distance = index - affiliationIndex;
+      const depth = Math.abs(distance);
+      const scale = Math.max(.7, 1 - depth * .085);
+      const opacity = Math.max(.2, 1 - depth * .18);
+      const rotate = distance * 5.5;
+      card.style.transform = `translate3d(${centerOffset + distance * step}px, 0, 0) rotate(${rotate}deg) scale(${scale})`;
+      card.style.opacity = String(opacity);
+      card.style.filter = `brightness(${Math.max(.62, 1 - depth * .12)}) saturate(${Math.max(.7, 1 - depth * .08)})`;
+      card.style.zIndex = String(100 - depth);
+      card.classList.toggle('is-active', distance === 0);
+      card.setAttribute('aria-current', distance === 0 ? 'true' : 'false');
+      card.tabIndex = distance === 0 ? 0 : -1;
+    });
+  }
   function syncAffiliationsScroll() {
     const list = document.querySelector('#affiliations-list');
     if (!list) return;
-    const overflowing = list.scrollWidth > list.clientWidth + 1;
-    document.querySelector('.affiliations-navigation').hidden = !overflowing;
-    list.tabIndex = overflowing ? 0 : -1;
-    document.querySelector('[data-affiliations-scroll="-1"]').disabled = list.scrollLeft <= 1;
-    document.querySelector('[data-affiliations-scroll="1"]').disabled = list.scrollLeft + list.clientWidth >= list.scrollWidth - 1;
+    const cards = list.querySelectorAll('.affiliation-card');
+    const hasMultiple = cards.length > 1;
+    document.querySelector('.affiliations-navigation').hidden = !hasMultiple;
+    list.tabIndex = hasMultiple ? 0 : -1;
+    positionAffiliations();
+    document.querySelector('[data-affiliations-scroll="-1"]').disabled = !hasMultiple || affiliationIndex <= 0;
+    document.querySelector('[data-affiliations-scroll="1"]').disabled = !hasMultiple || affiliationIndex >= cards.length - 1;
   }
   function workCard(work) {
     const title = local(work.title);
@@ -194,12 +223,28 @@
   render();
   if (!isNotes) {
     const affiliationsList = document.querySelector('#affiliations-list');
-    affiliationsList.addEventListener('scroll',syncAffiliationsScroll,{passive:true});
     document.querySelectorAll('[data-affiliations-scroll]').forEach(button => button.addEventListener('click',() => {
-      const card = affiliationsList.querySelector('.affiliation-card');
-      const step = card ? card.getBoundingClientRect().width + 18 : affiliationsList.clientWidth;
-      affiliationsList.scrollBy({left:Number(button.dataset.affiliationsScroll) * step});
+      const delta = Number(button.dataset.affiliationsScroll);
+      const count = affiliationsList.querySelectorAll('.affiliation-card').length;
+      affiliationIndex = Math.max(0, Math.min(count - 1, affiliationIndex + delta));
+      syncAffiliationsScroll();
+      affiliationsList.querySelector(`[data-affiliation-index="${affiliationIndex}"]`)?.focus({preventScroll:true});
     }));
+    affiliationsList.addEventListener('click', event => {
+      const card = event.target.closest('.affiliation-card');
+      if (!card || event.target.closest('a')) return;
+      affiliationIndex = Number(card.dataset.affiliationIndex);
+      syncAffiliationsScroll();
+    });
+    affiliationsList.addEventListener('keydown', event => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      const delta = event.key === 'ArrowRight' ? 1 : -1;
+      const count = affiliationsList.querySelectorAll('.affiliation-card').length;
+      affiliationIndex = Math.max(0, Math.min(count - 1, affiliationIndex + delta));
+      syncAffiliationsScroll();
+      affiliationsList.querySelector(`[data-affiliation-index="${affiliationIndex}"]`)?.focus({preventScroll:true});
+    });
     if ('ResizeObserver' in window) {
       new ResizeObserver(syncNewsOverflow).observe(document.querySelector('#news-list'));
       new ResizeObserver(syncAffiliationsScroll).observe(affiliationsList);
