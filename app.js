@@ -125,13 +125,16 @@
   function renderAffiliations() {
     const items = p.affiliations?.length ? p.affiliations : ['current','education','experience'].map(type => ({type,placeholder:true}));
     affiliationIndex = Math.min(affiliationIndex, Math.max(0, items.length - 1));
-    document.querySelector('#affiliations-list').innerHTML = items.map((a, i) => {
+    const list = document.querySelector('#affiliations-list');
+    const cards = items.map((a, i) => {
       const organization = a.placeholder ? t('institutionPending') : local(a.organization);
       const logo = url(a.logo);
       const detail = a.placeholder ? t('affiliationPending') : local(a.detail);
       const units = [a.department, a.programme].map(local).filter(Boolean);
-      return `<article class="affiliation-card" data-affiliation-index="${i}" tabindex="0" aria-label="${esc(a.placeholder ? t(a.type) : local(a.role))}"><div class="affiliation-top"><span class="affiliation-period">${esc(a.placeholder ? t('datesPending') : local(a.period))}</span><div class="affiliation-logo-slot">${logo ? `<img class="affiliation-logo${a.logoTheme === 'monochrome' ? ' affiliation-logo--monochrome' : ''}" src="${esc(logo)}" width="180" height="54" loading="lazy" alt="${esc(organization)}">` : `<span class="affiliation-icon" aria-hidden="true">${['⌘','◇','◎'][i % 3]}</span>`}</div></div><div class="affiliation-body"><h3>${esc(a.placeholder ? t(a.type) : local(a.role))}</h3><p class="affiliation-organization">${a.url && url(a.url) ? link(url(a.url),organization) : esc(organization)}</p>${units.map(unit => `<p class="affiliation-unit">${esc(unit)}</p>`).join('')}${detail ? `<p class="affiliation-detail">${inline(detail)}</p>` : ''}</div></article>`;
+      return `<article class="affiliation-card" data-affiliation-index="${i}" tabindex="-1" aria-hidden="true"><div class="affiliation-top"><span class="affiliation-period">${esc(a.placeholder ? t('datesPending') : local(a.period))}</span><div class="affiliation-logo-slot">${logo ? `<img class="affiliation-logo${a.logoTheme === 'monochrome' ? ' affiliation-logo--monochrome' : ''}" src="${esc(logo)}" width="180" height="54" loading="lazy" alt="${esc(organization)}">` : `<span class="affiliation-icon" aria-hidden="true">${['⌘','◇','◎'][i % 3]}</span>`}</div></div><div class="affiliation-body"><h3>${esc(a.placeholder ? t(a.type) : local(a.role))}</h3><p class="affiliation-organization">${a.url && url(a.url) ? link(url(a.url),organization) : esc(organization)}</p>${units.map(unit => `<p class="affiliation-unit">${esc(unit)}</p>`).join('')}${detail ? `<p class="affiliation-detail">${inline(detail)}</p>` : ''}</div></article>`;
     }).join('');
+    const steps = items.map((a, i) => `<button class="affiliation-step" type="button" data-affiliation-index="${i}" role="tab" aria-selected="false"><span class="affiliation-step-dot"></span><span class="affiliation-step-period">${esc(a.placeholder ? t('datesPending') : local(a.period))}</span><strong>${esc(a.placeholder ? t(a.type) : local(a.organization))}</strong></button>`).join('');
+    list.innerHTML = `<div class="affiliation-timeline" role="tablist">${steps}</div><div class="affiliation-detail-stage">${cards}</div>`;
     document.querySelector('[data-affiliations-scroll="-1"]').setAttribute('aria-label',t('affiliationsPrevious'));
     document.querySelector('[data-affiliations-scroll="1"]').setAttribute('aria-label',t('affiliationsNext'));
     requestAnimationFrame(syncAffiliationsScroll);
@@ -141,24 +144,33 @@
     if (!list) return;
     const cards = [...list.querySelectorAll('.affiliation-card')];
     if (!cards.length) return;
-    const cardWidth = Math.min(430, Math.max(250, list.clientWidth * (list.clientWidth < 560 ? .78 : .42)));
-    const step = Math.min(cardWidth * .58, Math.max(112, list.clientWidth * .22));
+    const cardWidth = Math.min(560, Math.max(280, list.clientWidth * .72));
+    const step = Math.min(cardWidth * .76, Math.max(150, list.clientWidth * .28));
     const centerOffset = Math.max(0, (list.clientWidth - cardWidth) / 2);
+    const half = cards.length / 2;
     list.style.setProperty('--affiliation-card-width', `${cardWidth}px`);
-    list.style.setProperty('--affiliation-step', `${step}px`);
     cards.forEach((card, index) => {
-      const distance = index - affiliationIndex;
+      let distance = index - affiliationIndex;
+      if (distance > half) distance -= cards.length;
+      if (distance < -half) distance += cards.length;
       const depth = Math.abs(distance);
-      const scale = Math.max(.7, 1 - depth * .085);
-      const opacity = Math.max(.2, 1 - depth * .18);
-      const rotate = distance * 5.5;
+      const active = distance === 0;
+      const scale = active ? 1 : Math.max(.74, 1 - depth * .1);
+      const opacity = active ? 1 : Math.max(.28, 1 - depth * .22);
+      const rotate = distance * 5;
+      card.style.width = `${cardWidth}px`;
       card.style.transform = `translate3d(${centerOffset + distance * step}px, 0, 0) rotate(${rotate}deg) scale(${scale})`;
       card.style.opacity = String(opacity);
-      card.style.filter = `brightness(${Math.max(.62, 1 - depth * .12)}) saturate(${Math.max(.7, 1 - depth * .08)})`;
+      card.style.filter = `brightness(${Math.max(.64, 1 - depth * .13)}) saturate(${Math.max(.72, 1 - depth * .08)})`;
       card.style.zIndex = String(100 - depth);
-      card.classList.toggle('is-active', distance === 0);
-      card.setAttribute('aria-current', distance === 0 ? 'true' : 'false');
-      card.tabIndex = distance === 0 ? 0 : -1;
+      card.style.visibility = depth <= 2 ? 'visible' : 'hidden';
+      card.classList.toggle('is-active', active);
+      card.setAttribute('aria-hidden', String(!active));
+      card.tabIndex = active ? 0 : -1;
+    });
+    list.querySelectorAll('.affiliation-step').forEach((stepButton, index) => {
+      stepButton.classList.toggle('is-active', index === affiliationIndex);
+      stepButton.setAttribute('aria-selected', String(index === affiliationIndex));
     });
   }
   function syncAffiliationsScroll() {
@@ -169,8 +181,8 @@
     document.querySelector('.affiliations-navigation').hidden = !hasMultiple;
     list.tabIndex = hasMultiple ? 0 : -1;
     positionAffiliations();
-    document.querySelector('[data-affiliations-scroll="-1"]').disabled = !hasMultiple || affiliationIndex <= 0;
-    document.querySelector('[data-affiliations-scroll="1"]').disabled = !hasMultiple || affiliationIndex >= cards.length - 1;
+    document.querySelector('[data-affiliations-scroll="-1"]').disabled = !hasMultiple;
+    document.querySelector('[data-affiliations-scroll="1"]').disabled = !hasMultiple;
   }
   function workCard(work) {
     const title = local(work.title);
@@ -223,27 +235,50 @@
   render();
   if (!isNotes) {
     const affiliationsList = document.querySelector('#affiliations-list');
+    let affiliationHoverTimer;
+    const cancelAffiliationHover = () => clearTimeout(affiliationHoverTimer);
     document.querySelectorAll('[data-affiliations-scroll]').forEach(button => button.addEventListener('click',() => {
+      cancelAffiliationHover();
       const delta = Number(button.dataset.affiliationsScroll);
       const count = affiliationsList.querySelectorAll('.affiliation-card').length;
-      affiliationIndex = Math.max(0, Math.min(count - 1, affiliationIndex + delta));
+      affiliationIndex = (affiliationIndex + delta + count) % count;
       syncAffiliationsScroll();
-      affiliationsList.querySelector(`[data-affiliation-index="${affiliationIndex}"]`)?.focus({preventScroll:true});
+      affiliationsList.querySelector(`.affiliation-card[data-affiliation-index="${affiliationIndex}"]`)?.focus({preventScroll:true});
     }));
     affiliationsList.addEventListener('click', event => {
-      const card = event.target.closest('.affiliation-card');
-      if (!card || event.target.closest('a')) return;
-      affiliationIndex = Number(card.dataset.affiliationIndex);
+      cancelAffiliationHover();
+      const target = event.target.closest('.affiliation-card, .affiliation-step');
+      if (!target || event.target.closest('a')) return;
+      affiliationIndex = Number(target.dataset.affiliationIndex);
       syncAffiliationsScroll();
     });
+    affiliationsList.addEventListener('pointermove', event => {
+      cancelAffiliationHover();
+      if (event.pointerType !== 'mouse') return;
+      const card = event.target.closest('.affiliation-card');
+      if (!card) return;
+      const nextIndex = Number(card.dataset.affiliationIndex);
+      if (nextIndex === affiliationIndex) return;
+      const {clientX, clientY} = event;
+      // Only physical pointer movement arms hover; moving cards must not keep cycling.
+      affiliationHoverTimer = setTimeout(() => {
+        const hoveredCard = document.elementFromPoint(clientX, clientY)?.closest('.affiliation-card');
+        if (!card.isConnected || hoveredCard !== card) return;
+        affiliationIndex = nextIndex;
+        syncAffiliationsScroll();
+      }, 120);
+    });
+    affiliationsList.addEventListener('pointerleave', cancelAffiliationHover);
+    affiliationsList.addEventListener('pointerdown', cancelAffiliationHover);
     affiliationsList.addEventListener('keydown', event => {
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
       event.preventDefault();
+      cancelAffiliationHover();
       const delta = event.key === 'ArrowRight' ? 1 : -1;
       const count = affiliationsList.querySelectorAll('.affiliation-card').length;
-      affiliationIndex = Math.max(0, Math.min(count - 1, affiliationIndex + delta));
+      affiliationIndex = (affiliationIndex + delta + count) % count;
       syncAffiliationsScroll();
-      affiliationsList.querySelector(`[data-affiliation-index="${affiliationIndex}"]`)?.focus({preventScroll:true});
+      affiliationsList.querySelector(`.affiliation-card[data-affiliation-index="${affiliationIndex}"]`)?.focus({preventScroll:true});
     });
     if ('ResizeObserver' in window) {
       new ResizeObserver(syncNewsOverflow).observe(document.querySelector('#news-list'));

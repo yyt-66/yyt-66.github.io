@@ -96,3 +96,14 @@ html[lang=zh-CN] h1,html[lang=zh-CN] h2{font-family:"Songti SC","Noto Serif CJK 
 .research-image--contain img{object-fit:contain}
 .research-card:hover .research-image--contain img{transform:none}
 @media(max-width:520px){.research-image--contain{margin:16px 16px 0;border-radius:14px}}
+
+/* Central coverflow with looping navigation. */
+.affiliation-experience{height:430px!important;overflow:hidden!important;padding:0!important;display:block!important;isolation:isolate}
+.affiliation-experience:before,.affiliation-experience:after{display:none}
+.affiliation-timeline{display:none!important}
+.affiliation-detail-stage{position:relative;min-height:410px;height:410px}
+.affiliation-detail-stage .affiliation-card{position:absolute;left:0;top:8px;width:var(--affiliation-card-width,560px);height:390px;min-height:0;padding:30px;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.68),rgba(255,255,255,.24));border:1px solid rgba(255,255,255,.82);display:flex;flex-direction:column;opacity:0;visibility:hidden;transform-origin:50% 90%;transition:transform .62s cubic-bezier(.22,.75,.22,1),opacity .45s ease,filter .45s ease,visibility 0s linear .62s,box-shadow .45s ease;will-change:transform,opacity,filter;box-shadow:0 22px 42px rgba(67,50,40,.15);pointer-events:auto}
+.affiliation-detail-stage .affiliation-card.is-active{background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,255,255,.44));box-shadow:0 28px 58px rgba(67,50,40,.23),0 0 0 1px rgba(255,255,255,.28) inset;pointer-events:auto;visibility:visible;transition-delay:0s}
+.affiliation-detail-stage .affiliation-card:focus-visible{outline:3px solid #47768e;outline-offset:5px}
+@media(max-width:780px){.affiliation-experience{height:450px!important}.affiliation-detail-stage{height:430px;min-height:430px}.affiliation-detail-stage .affiliation-card{height:410px;padding:24px}}
+@media(max-width:520px){.affiliation-experience{height:455px!important}.affiliation-detail-stage{height:435px;min-height:435px}.affiliation-detail-stage .affiliation-card{height:415px;padding:22px}}
