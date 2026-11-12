@@ -64,7 +64,10 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
         en: 'Supervised by [Prof. Geng Yang](https://person.zju.edu.cn/gengy), with the team led by [Academician Huayong Yang](https://person.zju.edu.cn/0089022)',
         zh: '师从[杨赓教授](https://person.zju.edu.cn/gengy)，在[杨华勇院士](https://person.zju.edu.cn/0089022)团队开展研究'
       },
-      logo: 'assets/affiliations/zju-blue.svg', url: 'https://www.zju.edu.cn/'
+      logos: [
+        'assets/affiliations/zju-blue.svg',
+        'assets/affiliations/zju-mechanical.png'
+      ], url: 'https://me.zju.edu.cn/'
     },
     {
       type: 'experience',
@@ -89,8 +92,12 @@ I'm always excited to connect with researchers, entrepreneurs, and anyone passio
       organization: { en: 'Zhejiang University', zh: '浙江大学' },
       department: { en: 'School of Aeronautics and Astronautics', zh: '航空航天学院' },
       programme: { en: 'MOE “Top-notch Plan 2.0” Mechanics Summer School', zh: '教育部“拔尖计划2.0”力学暑校' },
-      detail: { en: 'Bipedal wheeled robot development', zh: '双足轮式机器人研发' },
-      logo: 'assets/affiliations/zju-blue.svg', url: 'https://www.zju.edu.cn/'
+      detail: { en: 'Supervised by [Prof. Hongtao Wang](https://person.zju.edu.cn/htw), with the team led by [Academician Wei Yang](https://person.zju.edu.cn/yangwei)', zh: '师从王洪涛教授，在杨卫院士团队中开展研究' },
+      logos: [
+        'assets/affiliations/zju-blue.svg',
+        'assets/affiliations/zju-saa-transparent.png',
+        'assets/affiliations/zju-xmech.png'
+      ], url: 'http://saa.zju.edu.cn/'
     },
     {
       type: 'education',

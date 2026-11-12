@@ -128,10 +128,20 @@
     const list = document.querySelector('#affiliations-list');
     const cards = items.map((a, i) => {
       const organization = a.placeholder ? t('institutionPending') : local(a.organization);
-      const logo = url(a.logo);
+      const logos = Array.isArray(a.logos) ? a.logos : (a.logo ? [{src:a.logo, theme:a.logoTheme}] : []);
+      const logoImage = entry => {
+        const src = typeof entry === 'string' ? entry : entry?.src;
+        const theme = typeof entry === 'string' ? a.logoTheme : entry?.theme || a.logoTheme;
+        const imageUrl = url(src);
+        return imageUrl ? `<img class="affiliation-logo${theme === 'monochrome' ? ' affiliation-logo--monochrome' : ''}" src="${esc(imageUrl)}" width="180" height="54" loading="lazy" alt="${esc(organization)}">` : '';
+      };
+      const logoMarkup = logos.length > 2
+        ? `<div class="affiliation-logo-primary">${logoImage(logos[0])}</div><div class="affiliation-logo-secondary">${logos.slice(1).map(logoImage).join('')}</div>`
+        : logos.length ? logos.map(logoImage).join('') : `<span class="affiliation-icon" aria-hidden="true">${['⌘','◇','◎'][i % 3]}</span>`;
+      const logoSlotClass = logos.length > 2 ? ' affiliation-logo-slot--stacked' : '';
       const detail = a.placeholder ? t('affiliationPending') : local(a.detail);
       const units = [a.department, a.programme].map(local).filter(Boolean);
-      return `<article class="affiliation-card" data-affiliation-index="${i}" tabindex="-1" aria-hidden="true"><div class="affiliation-top"><span class="affiliation-period">${esc(a.placeholder ? t('datesPending') : local(a.period))}</span><div class="affiliation-logo-slot">${logo ? `<img class="affiliation-logo${a.logoTheme === 'monochrome' ? ' affiliation-logo--monochrome' : ''}" src="${esc(logo)}" width="180" height="54" loading="lazy" alt="${esc(organization)}">` : `<span class="affiliation-icon" aria-hidden="true">${['⌘','◇','◎'][i % 3]}</span>`}</div></div><div class="affiliation-body"><h3>${esc(a.placeholder ? t(a.type) : local(a.role))}</h3><p class="affiliation-organization">${a.url && url(a.url) ? link(url(a.url),organization) : esc(organization)}</p>${units.map(unit => `<p class="affiliation-unit">${esc(unit)}</p>`).join('')}${detail ? `<p class="affiliation-detail">${inline(detail)}</p>` : ''}</div></article>`;
+      return `<article class="affiliation-card" data-affiliation-index="${i}" tabindex="-1" aria-hidden="true"><div class="affiliation-top"><span class="affiliation-period">${esc(a.placeholder ? t('datesPending') : local(a.period))}</span><div class="affiliation-logo-slot${logoSlotClass}">${logoMarkup}</div></div><div class="affiliation-body"><h3>${esc(a.placeholder ? t(a.type) : local(a.role))}</h3><p class="affiliation-organization">${a.url && url(a.url) ? link(url(a.url),organization) : esc(organization)}</p>${units.map(unit => `<p class="affiliation-unit">${esc(unit)}</p>`).join('')}${detail ? `<p class="affiliation-detail">${inline(detail)}</p>` : ''}</div></article>`;
     }).join('');
     const steps = items.map((a, i) => `<button class="affiliation-step" type="button" data-affiliation-index="${i}" role="tab" aria-selected="false"><span class="affiliation-step-dot"></span><span class="affiliation-step-period">${esc(a.placeholder ? t('datesPending') : local(a.period))}</span><strong>${esc(a.placeholder ? t(a.type) : local(a.organization))}</strong></button>`).join('');
     list.innerHTML = `<div class="affiliation-timeline" role="tablist">${steps}</div><div class="affiliation-detail-stage">${cards}</div>`;
